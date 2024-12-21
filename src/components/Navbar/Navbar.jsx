@@ -27,10 +27,10 @@ const Navbar = () => {
                         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
                         {/* ------------------------------ */}
                         <NavLink to="/" className="">Home</NavLink>
-                        <NavLink to="/allVisas" className="text-base font-medium text-gray-700 uppercase">All Job Card</NavLink>
-                        <NavLink to="/addVisa" className="text-base font-medium text-gray-700 uppercase">Add Job</NavLink>
-                        <NavLink to="/myAddedVisas" className="text-base font-medium text-gray-700 uppercase">My Added Job</NavLink>
-                        <NavLink to="/myVisaApplications" className="text-base font-medium text-gray-700 uppercase">My Jod Applications</NavLink>
+                        <NavLink to="/allVisas" className="text-base font-medium text-gray-700 uppercase">Rooms</NavLink>
+                        <NavLink to="/addVisa" className="text-base font-medium text-gray-700 uppercase">My Booking Room</NavLink>
+                        <NavLink to="/myAddedVisas" className="text-base font-medium text-gray-700 uppercase">My Booking</NavLink>
+                        <NavLink to="/myVisaApplications" className="text-base font-medium text-gray-700 uppercase">Contact Us</NavLink>
                     </ul>
                 </div>
                 <Link>
@@ -46,7 +46,8 @@ const Navbar = () => {
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1 gap-10">
                     <NavLink to="/" className="text-lg font-medium text-gray-700 uppercase">Home</NavLink>
-                    <li>
+                    <NavLink to="/" className="text-lg font-medium text-gray-700 uppercase">Rooms</NavLink>
+                    {/* <li>
                         <details>
                             <summary className="p-0"><NavLink to="/allVisas" className="text-lg font-medium text-gray-700 uppercase">All Card</NavLink></summary>
                             <ul className="py-1 w-44 z-10">
@@ -59,9 +60,9 @@ const Navbar = () => {
                                 </div>
                             </ul>
                         </details>
-                    </li>
-                    <NavLink to="/addVisa" className="text-lg font-medium text-gray-700 uppercase">Add Job</NavLink>
-                    <NavLink to="/myAddedVisas" className="text-lg font-medium text-gray-700 uppercase">My Added Job</NavLink>
+                    </li> */}
+                    <NavLink to="/addVisa" className="text-lg font-medium text-gray-700 uppercase">My Booking Room</NavLink>
+                    <NavLink to="/myAddedVisas" className="text-lg font-medium text-gray-700 uppercase">My Booking</NavLink>
                     <NavLink to="/myVisaApplications" className="text-lg font-medium text-gray-700 uppercase">Contact Us</NavLink>
                 </ul>
             </div>

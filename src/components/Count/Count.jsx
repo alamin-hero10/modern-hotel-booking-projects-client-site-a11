@@ -1,74 +1,77 @@
 import CountUp from "react-countup";
-import { GoBook } from "react-icons/go";
-import { LiaAwardSolid } from "react-icons/lia";
-import { SlPeople } from "react-icons/sl";
-import { TbWorldCheck } from "react-icons/tb";
+
+// Import Images
+import guests from "../../assets/guests.png"
+import hotel from "../../assets/hotel.png"
+import livingRoom from "../../assets/living-room.png"
+import chair from "../../assets/chair.png"
 
 const Count = () => {
     return (
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5 animate__animated animate__bounceInRight animate__delay-.5s animate__slower">
             <div className="flex items-center gap-3">
-                <span className="w-14 h-14 bg-[#E6E5FF] p-2 rounded-full flex items-center justify-center"><SlPeople className="size-7" /></span>
+                <img className="w-16 h-16" src={guests} alt="" />
                 <div className="ml-2">
                     <div className="flex items-center">
                         <CountUp
                             start={0}
-                            end={1250}
+                            end={985}
                             delay={1}
-                            className="text-3xl font-medium"
+                            className="text-4xl font-base"
                         >
                         </CountUp>
-                        <span className="text-3xl font-medium text-blue-800 ml-2">+</span>
+                        <span className="text-4xl font-medium text-blue-800 ml-2">+</span>
                     </div>
-                    <p className="text-lg text-gray-500 mt-1">Active Students</p>
+                    <p className="text-lg text-gray-500 mt-1">Guests</p>
                 </div>
             </div>
             <div className="flex items-center gap-3">
-                <span className="w-14 h-14 bg-[#DFFFEC] p-3 rounded-full flex items-center justify-center"><GoBook className="size-7 text-[#4AD382]" /></span>
+                <img className="w-14 h-14" src={hotel} alt="" />
                 <div className="ml-2">
                     <div className="flex items-center">
                         <CountUp
                             start={0}
-                            end={60}
+                            end={7}
                             delay={1}
-                            className="text-3xl font-medium"
+                            className="text-4xl font-normal"
                         >
                         </CountUp>
-                        <span className="text-3xl font-medium text-blue-800 ml-2">+</span>
+                        
+                        <span className="text-4xl font-base text-blue-800 ml-2">+</span>
                     </div>
-                    <p className="text-lg text-gray-500 mt-1">Interactive Courses</p>
+                    <p className="text-lg text-gray-500 mt-1">Hotels</p>
                 </div>
             </div>
             <div className="flex items-center gap-3">
-                <span className="w-14 h-14 bg-[#FFF4DF] p-3 rounded-full flex items-center justify-center"><LiaAwardSolid className="size-7 text-[#FFB830]" /></span>
+                <img className="w-14 h-14" src={livingRoom} alt="" />
                 <div className="ml-2">
                     <div className="flex items-center">
                         <CountUp
                             start={0}
-                            end={3210}
+                            end={2570}
                             delay={1}
-                            className="text-3xl font-medium"
+                            className="text-4xl font-normal"
                         >
                         </CountUp>
-                        <span className="text-3xl font-medium text-blue-800 ml-2">+</span>
+                        <span className="text-4xl font-base text-blue-800 ml-2">+</span>
                     </div>
-                    <p className="text-lg text-gray-500 mt-1">Graduate Students</p>
+                    <p className="text-lg text-gray-500 mt-1">Rooms</p>
                 </div>
             </div>
             <div className="flex items-center gap-3">
-                <span className="w-14 h-14 bg-[#DFF4FF] p-3 rounded-full flex items-center justify-center"><TbWorldCheck className="size-7 text-[#3AB5F6]" /></span>
+                <img className="w-14 h-14" src={chair} alt="" />
                 <div className="ml-2">
                     <div className="flex items-center">
                         <CountUp
                             start={0}
-                            end={30}
+                            end={10}
                             delay={1}
-                            className="text-3xl font-medium"
+                            className="text-4xl font-normal"
                         >
                         </CountUp>
-                        <span className="text-3xl font-medium text-blue-800 ml-2">+</span>
+                        <span className="text-4xl font-base text-blue-800 ml-2">+</span>
                     </div>
-                    <p className="text-lg text-gray-500 mt-1">Certified Teachers</p>
+                    <p className="text-lg text-gray-500 mt-1">Beaches</p>
                 </div>
             </div>
         </div>

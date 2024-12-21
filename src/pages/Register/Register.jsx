@@ -1,14 +1,14 @@
 import { useContext, useState } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { NavLink, useNavigate } from "react-router-dom";
-import { toast } from "react-toastify";
+import { toast, ToastContainer } from "react-toastify";
 import Swal from "sweetalert2";
+import { AuthContext } from "../../components/AuthProvider/AuthProvider";
 
 const Register = () => {
 
     // ----- UseContext -----
-    // const { handleRegister, manageUpdateProfile, handleGoogleLogin } = useContext(AuthContext)
-    const { handleRegister, manageUpdateProfile, handleGoogleLogin } = useContext()
+    const { handleRegister, manageUpdateProfile, handleGoogleLogin } = useContext(AuthContext)
     const [error, setError] = useState();
     const navigate = useNavigate();
 
@@ -155,10 +155,10 @@ const Register = () => {
                         </div>
                     </form>
                 </div>
-                {/* <ToastContainer
+                <ToastContainer
                     position="top-center"
                     autoClose={5000}
-                ></ToastContainer> */}
+                ></ToastContainer>
             </div>
         </div>
     );
