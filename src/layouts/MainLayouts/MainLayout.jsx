@@ -7,7 +7,7 @@ const MainLayout = () => {
         <div className="">
             {/* Navbar */}
             <div className="bg-[#F1F5F9]">
-                <div className="w-11/12 mx-auto">
+                <div className="w-10/12 mx-auto">
                     <Navbar></Navbar>
                 </div>
             </div>

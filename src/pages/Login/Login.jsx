@@ -3,6 +3,8 @@ import { NavLink, useNavigate } from "react-router-dom";
 import { toast, ToastContainer } from "react-toastify";
 import { FcGoogle } from "react-icons/fc";
 import { AuthContext } from "../../components/AuthProvider/AuthProvider";
+import { FaGithub } from "react-icons/fa";
+import { Helmet } from "react-helmet";
 
 const Login = () => {
 
@@ -47,7 +49,7 @@ const Login = () => {
             .catch(error => {
                 setError(error.message)
             }
-        )
+            )
 
         // ---Password Validation---
         const passwordRegex = /^(?=.*[A-Z])(?=.*[a-z]).{6,}$/;
@@ -86,54 +88,64 @@ const Login = () => {
     }
 
 
-    // Return
+    // ---Return---
     return (
         <div>
-            <div className="hero min-h-screen">
-                <div className="card bg-base-100 w-full max-w-md shrink-0 shadow-2xl">
-                    <form onSubmit={handleLogInSubmit} className="card-body">
-                        <h2 className="text-2xl font-semibold text-center">Login your account</h2>
-                        <div className="form-control">
-                            <label className="label">
-                                <span className="label-text">Your Email</span>
-                            </label>
-                            <input
-                                name="email"
-                                type="email"
-                                ref={emailRef}
-                                placeholder="Email"
-                                className="input input-bordered"
-                                required />
-                        </div>
-                        <div className="form-control">
-                            <label className="label">
-                                <span className="label-text">Password</span>
-                            </label>
-                            <input
-                                name="password"
-                                type="text"
-                                placeholder="Password"
-                                className="input input-bordered"
-                                required />
-                            <label onClick={ForgotPasswordHandler} className="label">
-                                <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
-                            </label>
-                        </div>
-                        <div>
-                            {
-                                error &&
-                                <p className="label text-red-600">
-                                    {error}
-                                </p>
-                            }
-                        </div>
-                        <div className="form-control mt-6">
-                            <button className="btn btn-primary">Login</button>
-                            <p className="mt-3 text-center">Don’t have an Account ? <NavLink to="/register" className="text-green-600 mt-3">Register</NavLink> </p>
-                        </div>
-                    </form>
-                    <div className="text-center mb-5">
-                        <button onClick={googleLoginHandler} className=""><FcGoogle className="size-10" /></button>
+            <Helmet>
+                <title>Login | Modern Hotel</title>
+            </Helmet>
+        <div className="hero min-h-screen">
+            <div className="card bg-base-100 w-full max-w-md shrink-0 shadow-2xl">
+                <form onSubmit={handleLogInSubmit} className="card-body">
+                    <h2 className="text-2xl font-semibold text-center">Login Your Account</h2>
+                    {/* Your Email */}
+                    <div className="form-control">
+                        <label className="label">
+                            <span className="label-text">Your Email</span>
+                        </label>
+                        <input
+                            name="email"
+                            type="email"
+                            ref={emailRef}
+                            placeholder="Email"
+                            className="input input-bordered"
+                            required />
+                    </div>
+                    {/* Password */}
+                    <div className="form-control">
+                        <label className="label">
+                            <span className="label-text">Password</span>
+                        </label>
+                        <input
+                            name="password"
+                            type="text"
+                            placeholder="Password"
+                            className="input input-bordered"
+                            required />
+                        <label onClick={ForgotPasswordHandler} className="label">
+                            <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
+                        </label>
+                    </div>
+                    <div>
+                        {
+                            error &&
+                            <p className="label text-red-600">
+                                {error}
+                            </p>
+                        }
+                    </div>
+                    <div className="form-control mt-6">
+                        <button className="btn btn-primary">Login</button>
+                        <p className="mt-3 text-center">Don’t have an Account ? <NavLink to="/register" className="text-green-600 mt-3">Register</NavLink> </p>
+                    </div>
+                </form>
+                {/* Google and Github Login */}
+                <div className="flex items-center justify-center gap-5 mb-5">
+                    <div className="">
+                        <button onClick={googleLoginHandler}><FcGoogle className="size-10" /></button>
+                    </div>
+                    <div className="">
+                        <button onClick={googleLoginHandler}> <FaGithub className="size-10" /></button>
                     </div>
                 </div>
             </div>
@@ -141,6 +153,7 @@ const Login = () => {
                 position="bottom-right"
                 autoClose={5000}
             ></ToastContainer>
+        </div>
         </div>
     );
 };

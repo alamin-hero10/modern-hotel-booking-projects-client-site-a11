@@ -66,7 +66,7 @@ const Navbar = () => {
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1 gap-10">
                     <NavLink to="/" className="text-lg font-medium text-gray-700 uppercase">Home</NavLink>
-                    <NavLink to="/" className="text-lg font-medium text-gray-700 uppercase">Rooms</NavLink>
+                    <NavLink to="/rooms" className="text-lg font-medium text-gray-700 uppercase">Rooms</NavLink>
                     {/* <li>
                         <details>
                             <summary className="p-0"><NavLink to="/allVisas" className="text-lg font-medium text-gray-700 uppercase">All Card</NavLink></summary>
@@ -81,9 +81,9 @@ const Navbar = () => {
                             </ul>
                         </details>
                     </li> */}
-                    <NavLink to="/addVisa" className="text-lg font-medium text-gray-700 uppercase">My Booking Room</NavLink>
-                    <NavLink to="/myAddedVisas" className="text-lg font-medium text-gray-700 uppercase">My Booking</NavLink>
-                    <NavLink to="/myVisaApplications" className="text-lg font-medium text-gray-700 uppercase">Contact Us</NavLink>
+                    <NavLink to="/myBookingRoom" className="text-lg font-medium text-gray-700 uppercase">My Booking Room</NavLink>
+                    <NavLink to="/myBooking" className="text-lg font-medium text-gray-700 uppercase">My Booking</NavLink>
+                    <NavLink to="/contactUs" className="text-lg font-medium text-gray-700 uppercase">Contact Us</NavLink>
                 </ul>
             </div>
             {/* ---Navbar--- */}
@@ -114,7 +114,6 @@ const Navbar = () => {
                 {/* ------------------------- */}
                 <div className="">
                     <div className="dropdown dropdown-end">
-                        {/* ----------Condition---------- */}
                         <div className="flex">
                                     {
                                         user && user?.email ? <>

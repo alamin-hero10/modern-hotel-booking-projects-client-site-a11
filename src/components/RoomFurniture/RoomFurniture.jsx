@@ -1,3 +1,5 @@
+
+
 // Import Images
 import hotelImg from "../../assets/hotel7.png"
 import doubleBed from "../../assets/double-bed.png"
@@ -11,8 +13,7 @@ import drinks from "../../assets/Drinks.png"
 const RoomFurniture = () => {
     return (
         <div>
-            <div
-                className="hero place-items-stretch">
+            <div className="hero place-items-stretch">
                 <div>
                     <img
                         className="w-full h-[800px]" src={hotelImg} alt="" />
