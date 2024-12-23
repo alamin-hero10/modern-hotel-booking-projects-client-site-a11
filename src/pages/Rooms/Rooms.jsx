@@ -15,10 +15,11 @@ const Rooms = () => {
 
     // Axios DB Fetch the Data:
     const fetchAllRooms = async () => {
-        const { data } = await axios.get(`https://modern-hotel-server-projects-a11.vercel.app`)
+        const { data } = await axios.get(`https://modern-hotel-server-projects-a11.vercel.app/rooms`)
         setRooms(data)
     }
 
+    console.log(rooms)
     return (
         <div className="w-10/12 mx-auto my-24">
             <Helmet>

@@ -7,9 +7,6 @@ import logo from "../../assets/logo.png"
 import userIcon from "../../assets/user.png"
 
 const Navbar = () => {
-    
-    // const visaTypeData = useLoaderData();
-    // console.log(visaTypeData)
 
     const { user, handleLogOut } = useContext(AuthContext);
 
@@ -66,6 +63,7 @@ const Navbar = () => {
             {/* NavLink */}
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1 gap-10">
+                    {/* <NavLink to="/" className="text-lg font-medium text-gray-700 uppercase"><button onClick={() => document.getElementById('my_modal_4').showModal()}></button>HOME</NavLink> */}
                     <NavLink to="/" className="text-lg font-medium text-gray-700 uppercase">Home</NavLink>
                     <NavLink to="/rooms" className="text-lg font-medium text-gray-700 uppercase">Rooms</NavLink>
                     <NavLink to="/myBooking" className="text-lg font-medium text-gray-700 uppercase">My Booking</NavLink>

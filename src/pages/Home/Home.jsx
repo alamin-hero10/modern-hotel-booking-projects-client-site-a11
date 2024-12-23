@@ -6,7 +6,10 @@ import RoomFurniture from "../../components/RoomFurniture/RoomFurniture";
 // import Map from "../../Map/Map";
 import SpecialOffer from "../../components/SpecialOffer/SpecialOffer";
 
+
 const Home = () => {
+
+
     return (
         <div className="">
             <Helmet>
