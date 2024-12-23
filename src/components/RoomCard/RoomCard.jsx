@@ -1,7 +1,8 @@
+import { Link } from "react-router-dom";
 
 const RoomCard = ({ roomData }) => {
 
-    const { roomName, roomImage, description, price, totalReviews } = roomData || {};
+    const { _id, roomName, roomImage, description, price, totalReviews } = roomData || {};
 
     return (
         <div className="w-[370px]">
@@ -31,7 +32,9 @@ const RoomCard = ({ roomData }) => {
                     <h3>${price}</h3>
                     <p>{totalReviews}</p>
                 </div>
-                <button className="btn btn-primary">Book Now</button>
+                <Link to={`/roomDetails/${_id}`}>
+                    <button className="btn btn-primary">Book Now</button>
+                </Link>
             </div>
         </div>
     );

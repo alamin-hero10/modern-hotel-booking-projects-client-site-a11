@@ -32,6 +32,7 @@ const RoomDetail = () => {
                                 <input type="radio" name="rating-8" className="mask mask-star-2 bg-orange-400" />
                             </div>
                             <p>({totalReviews})</p>
+                            <p>${price}</p>
                         </div>
                     </div>
                     <div className="divider my-0"></div>
@@ -65,10 +66,9 @@ const RoomDetail = () => {
                             <li><strong>Max People:</strong> {roomData.stayDetails.maxPeople} </li>
                         </ul>
                     </div>
-                    <div className="text-center mt-7 mb-3">
-                        <Link to="" className="bg-[#015CB5] py-3 px-5 text-base font-medium text-white rounded-lg hover:bg-[#13af42]">Book Now</Link>
+                    <div className="mt-5">
+                        <button onClick={() => document.getElementById('my_modal_4').showModal()} className="bg-[#2a508b] py-2 px-5 rounded-lg md:text-lg font-medium text-white hover:bg-[#087cf0]">Book Now</button>
                     </div>
-                    <button onClick={() => document.getElementById('my_modal_4').showModal()} className="bg-[#2a508b] py-3 px-5 rounded-lg md:text-lg font-medium text-white hover:bg-[#087cf0]">Apply for the Visa</button>
                 </div>
             </div>
             <BookingModal></BookingModal>

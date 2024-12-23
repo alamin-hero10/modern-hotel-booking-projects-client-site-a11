@@ -45,9 +45,10 @@ const Navbar = () => {
                         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
                         {/* ------------------------------ */}
                         <NavLink to="/" className="">Home</NavLink>
-                        <NavLink to="/allVisas" className="text-base font-medium text-gray-700 uppercase">Rooms</NavLink>
-                        <NavLink to="/addVisa" className="text-base font-medium text-gray-700 uppercase">My Booking Room</NavLink>
-                        <NavLink to="/myAddedVisas" className="text-base font-medium text-gray-700 uppercase">My Booking</NavLink>
+                        <NavLink to="/rooms" className="text-base font-medium text-gray-700 uppercase">Rooms</NavLink>
+                        <NavLink to="/myBooking" className="text-base font-medium text-gray-700 uppercase">My Booking</NavLink>
+                        <NavLink to="/myBookingRoom" className="text-base font-medium text-gray-700 uppercase">My Booking Room</NavLink>
+                        <NavLink to="/aboutUs" className="text-lg font-medium text-gray-700 uppercase">About Us</NavLink>
                         <NavLink to="/myVisaApplications" className="text-base font-medium text-gray-700 uppercase">Contact Us</NavLink>
                     </ul>
                 </div>
@@ -67,22 +68,9 @@ const Navbar = () => {
                 <ul className="menu menu-horizontal px-1 gap-10">
                     <NavLink to="/" className="text-lg font-medium text-gray-700 uppercase">Home</NavLink>
                     <NavLink to="/rooms" className="text-lg font-medium text-gray-700 uppercase">Rooms</NavLink>
-                    {/* <li>
-                        <details>
-                            <summary className="p-0"><NavLink to="/allVisas" className="text-lg font-medium text-gray-700 uppercase">All Card</NavLink></summary>
-                            <ul className="py-1 w-44 z-10">
-                                <li><Link>Submenu 1</Link></li>
-                                <li><Link>Submenu 2</Link></li>
-                                <li><Link>Submenu 3</Link></li>
-                                <li><Link>Submenu 4</Link></li>
-                                <li><Link>Submenu 5</Link></li>
-                                <div className="py-1 w-44 z-10">
-                                </div>
-                            </ul>
-                        </details>
-                    </li> */}
-                    <NavLink to="/myBookingRoom" className="text-lg font-medium text-gray-700 uppercase">My Booking Room</NavLink>
                     <NavLink to="/myBooking" className="text-lg font-medium text-gray-700 uppercase">My Booking</NavLink>
+                    <NavLink to="/myBookingRoom" className="text-lg font-medium text-gray-700 uppercase">My Booking Room</NavLink>
+                    <NavLink to="/aboutUs" className="text-lg font-medium text-gray-700 uppercase">About Us</NavLink>
                     <NavLink to="/contactUs" className="text-lg font-medium text-gray-700 uppercase">Contact Us</NavLink>
                 </ul>
             </div>
