@@ -1,42 +1,32 @@
-
-
-// Import Images
-import bedRoom from "../../assets/hotel1.png"
+// Import All Files:
+import { useEffect, useState } from "react";
+import FeaturedRoomCard from "../FeaturedRoomCard/FeaturedRoomCard";
+import axios from "axios";
 
 
 // ---FeaturedRooms Function---
 const FeaturedRooms = () => {
+
+    // UseState:
+    const [rooms, setRooms] = useState([]);
+
+    // UseEffect:
+    useEffect(() => {
+        fetchAllRooms()
+    }, []);
+
+    // Axios DB Fetch the Data:
+    const fetchAllRooms = async () => {
+        const { data } = await axios.get(`http://localhost:5110/rooms`)
+        setRooms(data)
+    }
+
+    // ---Return---
     return (
-        <div>
-            <div className="">
-                <div>
-                    <img
-                        className="w-[400px] h-60"
-                        src={bedRoom}
-                        alt="hotel1.png" />
-                </div>
-                <div>
-                    <h1>Oceanfront Suite</h1>
-                    <div>
-                        <p>icon</p>
-                        <p>4140 Parker Rd. Allentown, New Mexico 31134</p>
-                    </div>
-                </div>
-                {/* <div>
-                <p>Wi-Fi</p>
-                <p>Workspace</p>
-                <p>Breakfast Included</p>
-                <p>Balcony</p>
-                <p>Jacuzzi</p>
-            </div> */}
-                <div>
-                    <div>
-                        <h3>$250/Night</h3>
-                        <p>3 Nights, 2 Rooms, 4 Persons</p>
-                    </div>
-                    <button>Book Now</button>
-                </div>
-            </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-14">
+            {
+                rooms.slice(0, 6).map((room) => <FeaturedRoomCard key={room._id} roomData={room}></FeaturedRoomCard>)
+            }
         </div>
     );
 };

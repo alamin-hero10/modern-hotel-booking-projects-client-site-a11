@@ -3,7 +3,7 @@ import Banner from "../../components/Banner/Banner";
 import Count from "../../components/Count/Count";
 import FeaturedRooms from "../../components/FeaturedRooms/FeaturedRooms";
 import RoomFurniture from "../../components/RoomFurniture/RoomFurniture";
-import Map from "../../Map/Map";
+// import Map from "../../Map/Map";
 import SpecialOffer from "../../components/SpecialOffer/SpecialOffer";
 
 const Home = () => {
@@ -27,7 +27,7 @@ const Home = () => {
             </div>
             {/* FeaturedRooms */}
             <div className="my-20 bg-[#f9fafc]">
-                <div className="w-10/12 mx-auto my-20 bg-[#f9fafc] py-20">
+                <div className="w-8/12 mx-auto my-20 bg-[#f9fafc] py-20">
                     <FeaturedRooms></FeaturedRooms>
                 </div>
             </div>

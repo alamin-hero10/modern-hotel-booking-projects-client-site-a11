@@ -8,6 +8,7 @@ import Rooms from "../../pages/Rooms/Rooms";
 import MyBookingRoom from "../../pages/MyBookingRoom/MyBookingRoom";
 import MyBooking from "../../pages/MyBooking/MyBooking";
 import PrivetRoute from "../PrivetRoutes/PrivetRoute";
+import RoomDetail from "../../components/RoomDetail/RoomDetail";
 
 const Router = createBrowserRouter([
     {
@@ -42,6 +43,11 @@ const Router = createBrowserRouter([
                 element: <PrivetRoute>
                     <MyBooking></MyBooking>
                 </PrivetRoute>
+            },
+            {
+                path: "/roomDetails/:id",
+                element:<RoomDetail></RoomDetail>,
+                loader: ({ params }) => fetch(`http://localhost:5110/rooms/${params.id}`)
             }
         ]
     }
