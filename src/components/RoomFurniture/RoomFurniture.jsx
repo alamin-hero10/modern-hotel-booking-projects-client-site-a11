@@ -1,6 +1,4 @@
-
-
-// Import Images
+// Import
 import hotelImg from "../../assets/hotel7.png"
 import doubleBed from "../../assets/double-bed.png"
 import wireless from "../../assets/wireless.png"
@@ -20,7 +18,7 @@ const RoomFurniture = () => {
                 </div>
                 <div className="hero-overlay bg-opacity-60"></div>
                 <div className="hero-content text-neutral-content mx-auto">
-                    <div className="flex items-center justify-center gap-20 mx-auto bg-white/80 backdrop-brightness-125 px-10 py-14">
+                    <div className="md:flex items-center justify-center gap-20 mx-auto bg-white/80 backdrop-brightness-125 px-10 py-14">
                         {/* Image-01 */}
                         <div>
                             <img

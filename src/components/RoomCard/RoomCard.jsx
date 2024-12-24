@@ -11,11 +11,13 @@ const RoomCard = ({ roomData }) => {
     return (
         <div>
             <Link to={`/roomDetails/${_id}`}>
-                <div className="w-[380px] drop-shadow-2xl bg-white rounded-xl">
+                {/* <div className="w-[380px] drop-shadow-2xl bg-white rounded-xl"> */}
+                <div className="drop-shadow-2xl bg-white rounded-xl">
                     {/* Image */}
                     <div>
                         <img
-                            className="w-[400px] h-60"
+                            // className="w-[400px] h-60"
+                            className=""
                             src={roomImage}
                             alt="hotel1.png" />
                     </div>

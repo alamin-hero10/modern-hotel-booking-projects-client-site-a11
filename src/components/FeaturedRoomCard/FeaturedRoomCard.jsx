@@ -11,7 +11,7 @@ const FeaturedRoomCard = ({ roomData }) => {
     return (
         <div className="">
             <Link to={`/roomDetails/${_id}`}>
-                <div className="w-[400px] drop-shadow-2xl bg-white rounded-xl">
+                <div className="drop-shadow-2xl bg-white rounded-xl">
                     {/* Image */}
                     <div>
                         <img
@@ -30,8 +30,8 @@ const FeaturedRoomCard = ({ roomData }) => {
                             <p className="text-base text-black font-normal">{location}</p>
                         </div>
                         {/* stayDetails */}
-                        <div className="flex items-center gap-7 my-5">
-                            <div className="flex items-center gap-3">
+                        <div className="md:flex items-center gap-7 my-5">
+                            <div className="flex items-center gap-3 mb-5 md:mb-0">
                                 <img className="w-8" src={bed} alt="" />
                                 <p className="text-base text-gray-500 font-medium"> {stayDetails.maxRooms} Rooms</p>
                             </div>
@@ -41,13 +41,13 @@ const FeaturedRoomCard = ({ roomData }) => {
                             </div>
                         </div>
                         {/* Review */}
-                        <div className="flex items-center gap-3 my-5">
+                        <div className="md:flex items-center gap-3 my-5">
                             <ReactStars
                                 count={5}
                                 // onChange={ratingChanged}
                                 size={24}
                                 color2={'#ffd700'} ></ReactStars>
-                            <p className="text-lg font-semibold bg-yellow-100 px-3 rounded-lg">{totalReviews} <span className="text-xs">Review</span> </p>
+                            <p className="text-lg font-semibold bg-yellow-100 px-3 rounded-lg mt-2 md:mt-0">{totalReviews} <span className="text-xs">Review</span> </p>
                         </div>
                         {/* Price */}
                         <div className="">

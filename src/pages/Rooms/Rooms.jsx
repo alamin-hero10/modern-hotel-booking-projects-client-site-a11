@@ -25,7 +25,7 @@ const Rooms = () => {
                 <title>Rooms | Modern Hotel</title>
                 <meta name="description" content="Nested component" />
             </Helmet>
-            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-16">
+            <div className="grid grid-cols-1 gap-0 md:grid-cols-3 lg:grid-cols-4 md:gap-16">
                 {
                     rooms.map((room) => <RoomCard key={room._id} roomData={room}></RoomCard>)
                 }

@@ -20,7 +20,7 @@ const Home = () => {
                 <Banner></Banner>
             </div>
             {/* SpecialOffer */}
-            <div className="my-20">
+            <div className="w-10/12 mx-auto my-20">
                 <h1 className="text-3xl text-black font-semibold text-center mb-16 font-gildaFont">Special Offer for Winter</h1>
                 <SpecialOffer></SpecialOffer>
             </div>
@@ -30,7 +30,7 @@ const Home = () => {
             </div>
             {/* FeaturedRooms */}
             <div className="my-20 bg-[#f9fafc]">
-                <div className="w-8/12 mx-auto my-20 bg-[#f9fafc] py-20">
+                <div className="w-10/12 md:w-8/12 mx-auto my-20 bg-[#f9fafc] py-20">
                     <FeaturedRooms></FeaturedRooms>
                 </div>
             </div>

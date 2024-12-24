@@ -6,7 +6,7 @@ import cardImg1 from "../../assets/hotel2.jpg"
 
 const SpecialOffer = () => {
     return (
-        <div className="flex items-center justify-center gap-10">
+        <div className="md:flex items-center justify-center gap-10">
             {/* Offer Card - 01 */}
             <motion.div
                 className="w-[350px]"

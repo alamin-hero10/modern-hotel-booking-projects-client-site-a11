@@ -1,6 +1,7 @@
 import { Link, NavLink } from "react-router-dom";
 import { useContext, useState } from "react";
 import { AuthContext } from "../AuthProvider/AuthProvider";
+import  "../Navbar/Navbar.css";
 
 // import logo and images
 import logo from "../../assets/logo.png"
@@ -52,7 +53,7 @@ const Navbar = () => {
                 <Link to="/">
                     <div className="flex items-center gap-3">
                         <img className="w-20 md:w-24" src={logo} alt="Logo Visa" />
-                        <div>
+                        <div className="hidden md:block">
                             <h1 className="text-2xl font-bold">MODERN</h1>
                             <p className="text-base text-end font-bold tracking-[15px]">HOTEL</p>
                         </div>
@@ -63,11 +64,11 @@ const Navbar = () => {
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1 gap-10">
                     {/* <NavLink to="/" className="text-lg font-medium text-gray-700 uppercase"><button onClick={() => document.getElementById('my_modal_4').showModal()}></button>HOME</NavLink> */}
-                    <NavLink to="/" className="text-lg font-medium text-gray-700 uppercase">Home</NavLink>
-                    <NavLink to="/rooms" className="text-lg font-medium text-gray-700 uppercase">Rooms</NavLink>
-                    <NavLink to="/myBooking" className="text-lg font-medium text-gray-700 uppercase">My Booking</NavLink>
-                    <NavLink to="/aboutUs" className="text-lg font-medium text-gray-700 uppercase">About Us</NavLink>
-                    <NavLink to="/contactUs" className="text-lg font-medium text-gray-700 uppercase">Contact Us</NavLink>
+                    <NavLink to="/" className="text-lg text-black font-base uppercase">Home</NavLink>
+                    <NavLink to="/rooms" className="text-lg text-black font-base uppercase">Rooms</NavLink>
+                    <NavLink to="/myBooking" className="text-lg text-black font-base uppercase">My Booking</NavLink>
+                    <NavLink to="/aboutUs" className="text-lg text-black font-base uppercase">About Us</NavLink>
+                    <NavLink to="/contactUs" className="text-lg text-black font-base uppercase">Contact Us</NavLink>
                 </ul>
             </div>
             {/* ---Navbar--- */}
@@ -77,7 +78,7 @@ const Navbar = () => {
                     <label className="swap swap-rotate">
                         <input
                             type="checkbox"
-                        onClick={handleToggleTheme} />
+                            onClick={handleToggleTheme} />
                         <svg
                             className="swap-on h-7 w-7 fill-current"
                             xmlns="http://www.w3.org/2000/svg"
@@ -99,33 +100,32 @@ const Navbar = () => {
                 <div className="">
                     <div className="dropdown dropdown-end">
                         <div className="flex">
-                                    {
-                                        user && user?.email ? <>
-                                            <div className="relative group">
-                                                <div className="flex items-center gap-5 mr-5 cursor-pointer">
-                                                    <img className="w-[50px] h-[50px] rounded-full" src={user?.photoURL || userIcon} alt="Profile" />
-                                                </div>
-
+                            {
+                                user && user?.email ? <>
+                                    <div className="relative group">
+                                        <div className="flex items-center gap-5 mr-5 cursor-pointer">
+                                            <img className="w-[50px] h-[50px] rounded-full" src={user?.photoURL || userIcon} alt="Profile" />
+                                        </div>
                                         <div className="absolute hidden group-hover:block bg-slate-300 rounded px-3 top-[50px] -right-20 transform -translate-x-1/2 z-10">
-                                                    <div className="w-52">
-                                                        <div className="text-2xl text-center font-semibold my-2">
-                                                            {user?.displayName || ""}
-                                                        </div>
-                                                        <div className="text-center my-3">
-                                                            {user?.displayName &&
-                                                                <button onClick={handleLogOut} className="w-full border border-solid border-gray-500 text-xl font-normal bg-[#015CB5] text-white py-1 px-10 rounded-md">Log Out</button> || ""}
-                                                        </div>
-                                                    </div>
+                                            <div className="w-52">
+                                                <div className="text-2xl text-center font-semibold my-2">
+                                                    {user?.displayName || ""}
+                                                </div>
+                                                <div className="text-center my-3">
+                                                    {user?.displayName &&
+                                                        <button onClick={handleLogOut} className="w-full border border-solid border-gray-500 text-xl font-normal bg-[#015CB5] text-white py-1 px-10 rounded-md">Log Out</button> || ""}
                                                 </div>
                                             </div>
-                                        </>
-                                            :
-                                            <>
-                                                <Link to="/login" className="text-lg font-normal text-white bg-[#015CB5] py-2 px-6 rounded-md ml-3 hover:bg-[#13af42]">Login</Link>
-                                                <Link to="/register" className="text-lg font-normal text-white bg-[#015CB5] py-2 px-3 rounded-md ml-3 hover:bg-[#13af42]">Register</Link>
-                                            </>
-                                    }
-                                </div>
+                                        </div>
+                                    </div>
+                                </>
+                                    :
+                                    <>
+                                        <Link to="/login" className="text-lg font-normal text-white bg-[#015CB5] py-2 px-6 rounded-md ml-3 hover:bg-[#13af42]">Login</Link>
+                                        <Link to="/register" className="text-lg font-normal text-white bg-[#015CB5] py-2 px-3 rounded-md ml-3 hover:bg-[#13af42]">Register</Link>
+                                    </>
+                            }
+                        </div>
                     </div>
                 </div>
             </div>
