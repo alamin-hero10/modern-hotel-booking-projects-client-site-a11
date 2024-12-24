@@ -1,17 +1,60 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { useLoaderData } from "react-router-dom";
+import { AuthContext } from "../AuthProvider/AuthProvider";
+import axios from "axios";
 
 
 
 const BookingModal = () => {
 
-    const roomData =useLoaderData();
-    
-    const { roomName, roomImage, description, price, totalReviews, location, date, stayDetails, keyFeatures, topCategories, } = roomData;
+    // useContext
+    const {user} = useContext(AuthContext);
 
+    // useLoaderData
+    const roomData = useLoaderData();
+
+    const { id, roomName, roomImage, price, totalReviews, location, stayDetails, keyFeatures, topCategories, } = roomData;
+
+    // Date Picker
     const [startDate, setStartDate] = useState(new Date());
+
+    // Handle Hotel Booking Submit
+    const handleBookingSubmit = async (event) => {
+        event.preventDefault();
+        const form = event.target;
+        const description = form.description.value;
+        const date = startDate;
+
+        const bookingData = { 
+            id,
+            roomName,
+            roomImage,
+            description,
+            price,
+            totalReviews,
+            location,
+            keyFeatures,
+            stayDetails,
+            topCategories,
+            date,
+            customer: {
+                email: user?.email,
+                name: user?.displayName,
+                photo: user?.photoURL,
+            },
+            room: "Unavailable"
+        }
+
+        // Make Post Request:
+        const { data } = await axios.post(`http://localhost:5110/add-booking`, bookingData)
+        console.log(data)
+    }
+    
+
+    // https://modern-hotel-server-projects-a11.vercel.app
+
 
     return (
         <div>
@@ -25,8 +68,7 @@ const BookingModal = () => {
                     <div>
                         <div className="card w-full max-w-2xl mx-auto shrink-0">
                             <h2 className="text-2xl font-semibold text-center mb-10">Booking Information</h2>
-                            {/* <form onSubmit={handleVisaUpdate}> */}
-                            <form onSubmit="">
+                            <form onSubmit={handleBookingSubmit}>
                                 <div className="grid grid-cols-2">
                                     <div className="hero">
                                         <div className=" w-full shrink-0">
@@ -35,16 +77,6 @@ const BookingModal = () => {
                                                 <div className="form-control">
                                                     <h3>Room Name:</h3>
                                                     <p className="bg-amber-100 rounded-lg px-2 py-1">{roomName}</p>
-                                                    {/* <label className="label">
-                                                        <span className="label-text text-lg">Room Name</span>
-                                                    </label> */}
-                                                    {/* <input
-                                                        name="name"
-                                                        type="name"
-                                                        defaultValue={roomName}
-                                                        placeholder="Country Name"
-                                                        className="input input-bordered"
-                                                        required /> */}
                                                 </div>
                                                 {/* ---Booking Date--- */}
                                                 <div className="form-control">
@@ -76,7 +108,7 @@ const BookingModal = () => {
                                                         <span className="label-text text-lg">Description</span>
                                                     </label>
                                                     <input
-                                                        name="applicationMethod"
+                                                        name="description"
                                                         type="text"
                                                         placeholder="Application Method"
                                                         className="input input-bordered"

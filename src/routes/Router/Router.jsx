@@ -9,6 +9,8 @@ import MyBookingRoom from "../../pages/MyBookingRoom/MyBookingRoom";
 import MyBooking from "../../pages/MyBooking/MyBooking";
 import PrivetRoute from "../PrivetRoutes/PrivetRoute";
 import RoomDetail from "../../components/RoomDetail/RoomDetail";
+import AboutUs from "../../components/AboutUs/AboutUs";
+import ContactUs from "../../components/ContactUs/ContactUs";
 
 const Router = createBrowserRouter([
     {
@@ -33,10 +35,11 @@ const Router = createBrowserRouter([
                 element: <Rooms></Rooms>
             },
             {
-                path: "/myBookingRoom",
+                path: "/myBookingRoom/:id",
                 element: <PrivetRoute>
                     <MyBookingRoom></MyBookingRoom>
-                </PrivetRoute>
+                </PrivetRoute>,
+                // loader: ({ params }) => fetch(`http://localhost:5110/add-booking/${params.id}`)
             },
             {
                 path: "/myBooking",
@@ -47,7 +50,15 @@ const Router = createBrowserRouter([
             {
                 path: "/roomDetails/:id",
                 element: <RoomDetail></RoomDetail>,
-                loader: ({ params }) => fetch(`https://modern-hotel-server-projects-a11.vercel.app/rooms/${params.id}`)
+                loader: ({ params }) => fetch(`http://localhost:5110/rooms/${params.id}`)
+            },
+            {
+                path: "/aboutUs",
+                element: <AboutUs></AboutUs>
+            },
+            {
+                path: "/contactUs",
+                element: <ContactUs></ContactUs>
             }
         ]
     }

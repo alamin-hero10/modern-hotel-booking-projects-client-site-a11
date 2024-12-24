@@ -1,7 +1,12 @@
 import { Helmet } from "react-helmet";
+import { useLoaderData } from "react-router-dom";
 
 
 const MyBookingRoom = () => {
+
+    const { data } = useLoaderData();
+    console.log(data)
+
     return (
         <div>
             <Helmet>

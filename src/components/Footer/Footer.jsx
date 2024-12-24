@@ -8,11 +8,11 @@ const Footer = () => {
         <div className="md:grid md:grid-cols-2 lg:grid-cols-4 py-20 items-center justify-center">
             {/* ---Section-01--- */}
             <div className="text-white">
-                <h1 className="text-white text-3xl font-bold">VISA NAVIGATOR</h1>
+                <h1 className="text-white text-3xl font-bold">MODERN HOTEL</h1>
                 <p className="text-gray-300 mt-3">Contact us to know about the Visa <br /> or you can know about us through <br /> social media.</p>
                 <div className="flex items-center gap-2 my-3">
                     <MdEmail className="size-6 text-orange-400" />
-                    <h3>Email: abc@gmail.com</h3>
+                    <h3>Email: modernhotel@gmail.com</h3>
                 </div>
                 <div className="flex items-center gap-7 mt-1 mb-2">
                     <a href="https://www.facebook.com/">
@@ -32,31 +32,32 @@ const Footer = () => {
             {/* ---Section-02--- */}
             <div className="text-white">
                 <h1 className="text-xl font-semibold">Explore</h1>
+                <div className="w-[73px] border-t"></div>
                 <div className="flex flex-col gap-2 mt-5">
-                    <Link to="/allVisas" className="flex items-center text-base text-gray-300">
+                    <Link to="/" className="flex items-center text-base text-gray-300">
                         <MdKeyboardDoubleArrowRight className="size-5" />
-                        <span>All Visas</span>
+                        <span>Home</span>
                     </Link>
-                    <Link to="/addVisa" className="flex items-center text-base text-gray-300">
+                    <Link to="/rooms" className="flex items-center text-base text-gray-300">
                         <MdKeyboardDoubleArrowRight className="size-5" />
-                        <span>Add Visa</span>
+                        <span>Rooms</span>
                     </Link>
-                    <Link to="/myAddedVisas" className="flex items-center text-base text-gray-300">
+                    <Link to="/myBooking" className="flex items-center text-base text-gray-300">
                         <MdKeyboardDoubleArrowRight className="size-5" />
-                        <span>My Added Visas</span>
+                        <span>My Booking</span>
                     </Link>
-                    <Link to="/myVisaApplications" className="flex items-center text-base text-gray-300">
+                    <Link to="/aboutUs" className="flex items-center text-base text-gray-300">
                         <MdKeyboardDoubleArrowRight className="size-5" />
-                        <span>My Visa Applications</span>
+                        <span>About Us</span>
                     </Link>
-                    <Link to="/contact" className="flex items-center text-base text-gray-300">
+                    <Link to="/contactUs" className="flex items-center text-base text-gray-300">
                         <MdKeyboardDoubleArrowRight className="size-5" />
                         <span>Contact Us</span>
                     </Link>
                 </div>
             </div>
             {/* ---Section-03--- */}
-            <div className="text-white md:mt-10 lg:mt-0">
+            {/* <div className="text-white md:mt-10 lg:mt-0">
                 <h1 className="text-xl font-semibold">Services</h1>
                 <div className="flex flex-col gap-2 mt-5">
                     <Link to="/allVisas" className="flex items-center text-base text-gray-300">
@@ -80,11 +81,12 @@ const Footer = () => {
                         <span>Canada</span>
                     </Link>
                 </div>
-            </div>
+            </div> */}
             {/* ---Section-04--- */}
             <div className="text-white mt-0 md:mt-10 lg:mt-0">
                 <div>
                     <h1 className="text-lg font-semibold">Address:</h1>
+                    <div className="w-[75px] border-t"></div>
                     <p className="text-base text-gray-300 mt-5">775 5th Ave, Dhaka,</p>
                     <p className="text-base text-gray-300">BD 1205 Bangladesh</p>
                 </div>

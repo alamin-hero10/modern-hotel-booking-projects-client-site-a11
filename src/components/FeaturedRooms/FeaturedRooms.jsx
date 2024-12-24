@@ -17,11 +17,10 @@ const FeaturedRooms = () => {
 
     // Axios DB Fetch the Data:
     const fetchAllRooms = async () => {
-        const { data } = await axios.get(`https://modern-hotel-server-projects-a11.vercel.app/rooms`)
+        const { data } = await axios.get(`http://localhost:5110/rooms`)
         setRooms(data)
     }
 
-    console.log(rooms)
     // ---Return---
     return (
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-14">
