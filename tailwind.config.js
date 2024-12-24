@@ -6,7 +6,11 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}"
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        gildaFont: ["Gilda Display", "serif"]
+      },
+    },
   },
   plugins: [daisyui],
 };

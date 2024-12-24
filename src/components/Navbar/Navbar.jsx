@@ -103,17 +103,17 @@ const Navbar = () => {
                                         user && user?.email ? <>
                                             <div className="relative group">
                                                 <div className="flex items-center gap-5 mr-5 cursor-pointer">
-                                                    <img className="w-14 h-14 rounded-full" src={user?.photoURL || userIcon} alt="Profile" />
+                                                    <img className="w-[50px] h-[50px] rounded-full" src={user?.photoURL || userIcon} alt="Profile" />
                                                 </div>
 
-                                                <div className="absolute hidden group-hover:block bg-slate-300 rounded px-4 py-2 top-[57px] -right-24 transform -translate-x-1/2 z-10">
-                                                    <div className="">
-                                                        <div className="text-xl font-semibold my-2">
+                                        <div className="absolute hidden group-hover:block bg-slate-300 rounded px-3 top-[50px] -right-20 transform -translate-x-1/2 z-10">
+                                                    <div className="w-52">
+                                                        <div className="text-2xl text-center font-semibold my-2">
                                                             {user?.displayName || ""}
                                                         </div>
                                                         <div className="text-center my-3">
                                                             {user?.displayName &&
-                                                                <button onClick={handleLogOut} className="w-full border border-solid border-gray-500 text-xl font-normal bg-[#015CB5] text-white py-1 px-4 rounded-md">Log Out</button> || ""}
+                                                                <button onClick={handleLogOut} className="w-full border border-solid border-gray-500 text-xl font-normal bg-[#015CB5] text-white py-1 px-10 rounded-md">Log Out</button> || ""}
                                                         </div>
                                                     </div>
                                                 </div>

@@ -3,15 +3,20 @@ import { useContext, useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
 import { AuthContext } from "../../components/AuthProvider/AuthProvider";
 import toast from "react-hot-toast";
+import { Link } from "react-router-dom";
+import ReviewModal from "../../components/ReviewModal/ReviewModal";
+import { format } from 'date-fns'
 
 
 const MyBooking = () => {
+
 
     // ---useContext---
     const { user } = useContext(AuthContext);
 
     // ---UseState---
     const [rooms, setRooms] = useState([]);
+    console.log(rooms)
 
     // ---UseEffect---
     useEffect(() => {
@@ -40,20 +45,22 @@ const MyBooking = () => {
     const handleCancelConfirm = (id) => {
         toast((t) => (
             <div>
-                <div>
-                    <p>Are you sure?</p>
-                    <p>You wont be able to revert this!</p>
+                <div className="text-center">
+                    <h1 className="text-3xl text-black mt-5 mb-2">Are you sure?</h1>
+                    <p className="text-lg mb-5">Do you want to cancel this data?</p>
                 </div>
-                <div>
+                <div className="text-center mb-2">
                     <button
-                        className="bg-red-500 text-white px-3 py-1 rounded-md"
+                        className="bg-red-500 text-white px-3 py-1 rounded-sm"
                         onClick={() => {
                             handleCancel(id)
                             toast.dismiss(t.id)
                         }}>Confirm</button>
                     <button
-                        className="bg-green-500 text-white px-3 py-1 rounded-md"
-                        onClick={() => toast.dismiss(t.id)}>Cancel</button>
+                        className="bg-green-500 text-white px-3 py-1 rounded-sm ml-5"
+                        onClick={() => toast.dismiss(t.id)}>
+                        Cancel
+                    </button>
                 </div>
             </div>
         ))
@@ -63,16 +70,16 @@ const MyBooking = () => {
 
     // ---Return---
     return (
-        <div className="w-9/12 mx-auto my-14">
+        <div className="w-9/12 mx-auto my-10">
             <Helmet>
                 <title>My Booking| Modern Hotel</title>
             </Helmet>
-            {/* --------------- */}
+            {/* My Booking Room Count */}
             <div>
                 <h3 className="text-lg font-semibold">My Booking Room: <span className="bg-[#ECFDF5] text-xs text-[#059669] px-3 py-1 rounded-3xl">{rooms.length} Room</span></h3>
             </div>
-            {/* --------------- */}
-            <div className="overflow-x-auto">
+            {/* ---Table Formate--- */}
+            <div className="overflow-x-auto mt-5">
                 <table className="table table-lg border border-solid">
                     <thead className="border border-solid bg-slate-100">
                         <tr className="text-[17px] text-black font-normal">
@@ -96,16 +103,20 @@ const MyBooking = () => {
                                     </td>
                                     <td>{room.roomName}</td>
                                     <td>{room.customer.email}</td>
-                                    <td>{room.date}</td>
+                                    <td>{format(new Date(room.date), 'P')}</td>
                                     <td>${room.price}</td>
                                     <td>
-                                        <div className="flex items-center gap-5">
+                                        <div className="flex items-center gap-2">
+                                            <Link to={`/myBookingUpdate`}>
+                                                {/* <Link to={`/myBookingUpdate/${room._id}`}> */}
+                                                <button className="text-white bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Update Date</button>
+                                            </Link>
                                             <button
-
-                                                className="btn btn-success">Update Date</button>
+                                                onClick={() => document.getElementById('my_modal_4').showModal()}
+                                                className="text-white bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Review</button>
                                             <button
                                                 onClick={() => handleCancelConfirm(room._id)}
-                                                className="btn btn-secondary">Cancel</button>
+                                                className="text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Cancel</button>
                                         </div>
                                     </td>
                                 </tr>
@@ -114,6 +125,7 @@ const MyBooking = () => {
                     </tbody>
                 </table>
             </div>
+            <ReviewModal></ReviewModal>
         </div>
     );
 };

@@ -1,33 +1,37 @@
 import { useContext, useState } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useNavigate } from "react-router-dom";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 import axios from "axios";
+import Swal from "sweetalert2";
 
 
 
 const BookingModal = () => {
 
-    // useContext
-    const {user} = useContext(AuthContext);
+    // useContext:
+    const { user } = useContext(AuthContext);
 
-    // useLoaderData
+    // useNavigate:
+    const navigate = useNavigate()
+
+    // useLoaderData:
     const roomData = useLoaderData();
 
     const { id, roomName, roomImage, price, totalReviews, location, stayDetails, keyFeatures, topCategories, } = roomData;
 
-    // Date Picker
+    // Date Picker:
     const [startDate, setStartDate] = useState(new Date());
 
-    // Handle Hotel Booking Submit
+    // Handle Hotel Booking Submit:
     const handleBookingSubmit = async (event) => {
         event.preventDefault();
         const form = event.target;
         const description = form.description.value;
         const date = startDate;
 
-        const bookingData = { 
+        const bookingData = {
             id,
             roomName,
             roomImage,
@@ -47,11 +51,24 @@ const BookingModal = () => {
             room: "Unavailable"
         }
 
-        // Make Post Request:
-        const { data } = await axios.post(`http://localhost:5110/add-booking`, bookingData)
-        console.log(data)
+        // Try - Catch Block and Make Post Request:
+        try{
+            const { data } = await axios.post(`http://localhost:5110/add-booking`, bookingData)
+            console.log(data)
+            if(data){
+                Swal.fire({
+                    title: "Drag me!",
+                    icon: "success",
+                    draggable: true
+                });
+            }
+            navigate("/myBooking")
+        }
+        catch (error) {
+            console.log(error)
+        }
     }
-    
+
 
     // https://modern-hotel-server-projects-a11.vercel.app
 
@@ -59,7 +76,7 @@ const BookingModal = () => {
     return (
         <div>
             <dialog id="my_modal_4" className="modal">
-                <div className="modal-box w-8/12 max-w-xl py-20">
+                <div className="modal-box w-8/12 max-w-xl pt-20">
                     {/* ---Cancel Button--- */}
                     <form method="dialog">
                         <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
@@ -73,10 +90,10 @@ const BookingModal = () => {
                                     <div className="hero">
                                         <div className=" w-full shrink-0">
                                             <div className=" py-0">
-                                                {/* ---Room Price--- */}
+                                                {/* ---Room Name--- */}
                                                 <div className="form-control">
                                                     <h3>Room Name:</h3>
-                                                    <p className="bg-amber-100 rounded-lg px-2 py-1">{roomName}</p>
+                                                    <p className="text-green-700 text-lg font-semibold rounded-lg py-1">{roomName}</p>
                                                 </div>
                                                 {/* ---Booking Date--- */}
                                                 <div className="form-control">
@@ -91,19 +108,17 @@ const BookingModal = () => {
                                             </div>
                                         </div>
                                     </div>
-                                    {/* --------------------------------- */}
+                                    {/* ---Price and Description--- */}
                                     <div className="hero">
                                         <div className="card bg-base-100 w-full shrink-0">
                                             <div className=" ">
-                                                {/* ---Country Image--- */}
+                                                {/* ---Price--- */}
                                                 <div className="form-control">
-
-                                                    <h3>Price $</h3>
-                                                    <span className="bg-amber-100 rounded-lg px-2 py-1">{price}</span>
+                                                    <h3>Price:</h3>
+                                                    <span className="text-green-700 text-lg font-semibold py-1">$ {price}</span>
                                                 </div>
-                                                {/* ---Application Method--- */}
+                                                {/* ---Description--- */}
                                                 <div className="form-control">
-                                                    {/* <p>{description}</p> */}
                                                     <label className="label">
                                                         <span className="label-text text-lg">Description</span>
                                                     </label>
@@ -118,9 +133,9 @@ const BookingModal = () => {
                                         </div>
                                     </div>
                                 </div>
-
-                                <div className="flex items-center justify-center mt-7">
-                                    <button className="bg-[#015CB5] py-3 px-7 text-base font-medium text-white rounded-md hover:bg-[#4caf50] tracking-widest">Confirm</button>
+                                {/* ---Button--- */}
+                                <div className="flex items-center justify-center mt-12">
+                                    <button className="text-white md:text-lg  bg-gradient-to-br from-green-400 to-blue-600 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Confirm</button>
                                 </div>
                             </form>
                         </div>

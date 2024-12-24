@@ -3,8 +3,8 @@ import Banner from "../../components/Banner/Banner";
 import Count from "../../components/Count/Count";
 import FeaturedRooms from "../../components/FeaturedRooms/FeaturedRooms";
 import RoomFurniture from "../../components/RoomFurniture/RoomFurniture";
-// import Map from "../../Map/Map";
 import SpecialOffer from "../../components/SpecialOffer/SpecialOffer";
+import Map from "../../Map/Map";
 
 
 const Home = () => {
@@ -21,7 +21,7 @@ const Home = () => {
             </div>
             {/* SpecialOffer */}
             <div className="my-20">
-                <h1 className="text-3xl text-black font-semibold text-center mb-16">Special Offer for Winter</h1>
+                <h1 className="text-3xl text-black font-semibold text-center mb-16 font-gildaFont">Special Offer for Winter</h1>
                 <SpecialOffer></SpecialOffer>
             </div>
             {/* React-Count */}

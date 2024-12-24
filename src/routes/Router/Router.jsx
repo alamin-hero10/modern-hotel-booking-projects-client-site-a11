@@ -11,6 +11,7 @@ import PrivetRoute from "../PrivetRoutes/PrivetRoute";
 import RoomDetail from "../../components/RoomDetail/RoomDetail";
 import AboutUs from "../../components/AboutUs/AboutUs";
 import ContactUs from "../../components/ContactUs/ContactUs";
+import MyBookingUpdate from "../../components/MyBookingUpdate/MyBookingUpdate";
 
 const Router = createBrowserRouter([
     {
@@ -35,11 +36,10 @@ const Router = createBrowserRouter([
                 element: <Rooms></Rooms>
             },
             {
-                path: "/myBookingRoom/:id",
+                path: "/myBookingRoom",
                 element: <PrivetRoute>
                     <MyBookingRoom></MyBookingRoom>
-                </PrivetRoute>,
-                // loader: ({ params }) => fetch(`http://localhost:5110/add-booking/${params.id}`)
+                </PrivetRoute>
             },
             {
                 path: "/myBooking",
@@ -51,6 +51,10 @@ const Router = createBrowserRouter([
                 path: "/roomDetails/:id",
                 element: <RoomDetail></RoomDetail>,
                 loader: ({ params }) => fetch(`http://localhost:5110/rooms/${params.id}`)
+            },
+            {
+                path: "/myBookingUpdate",
+                element: <MyBookingUpdate></MyBookingUpdate>
             },
             {
                 path: "/aboutUs",
