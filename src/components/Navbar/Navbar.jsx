@@ -21,7 +21,7 @@ const Navbar = () => {
 
     // ---Return---
     return (
-        <div className="navbar bg-[#F1F5F9] p-0">
+        <div className="navbar bg-[#F1F5F9] px-0  z-10">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -40,9 +40,9 @@ const Navbar = () => {
                     </div>
                     <ul
                         tabIndex={0}
-                        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-10 mt-3 w-52 p-2 shadow">
                         {/* ------------------------------ */}
-                        <NavLink to="/" className="">Home</NavLink>
+                        <NavLink to="/" className="text-base font-medium text-gray-700 uppercase">Home</NavLink>
                         <NavLink to="/rooms" className="text-base font-medium text-gray-700 uppercase">Rooms</NavLink>
                         <NavLink to="/myBooking" className="text-base font-medium text-gray-700 uppercase">My Bookings</NavLink>
                         <NavLink to="/aboutUs" className="text-lg font-medium text-gray-700 uppercase">About Us</NavLink>

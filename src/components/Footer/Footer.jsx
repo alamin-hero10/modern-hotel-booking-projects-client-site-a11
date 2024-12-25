@@ -5,98 +5,95 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
     return (
-        <div className="md:grid md:grid-cols-2 lg:grid-cols-4 py-20 items-center justify-center">
-            {/* ---Section-01--- */}
-            <div className="text-white">
-                <h1 className="text-white text-3xl font-bold">MODERN HOTEL</h1>
-                <p className="text-gray-300 mt-3">Contact us to know about the Visa <br /> or you can know about us through <br /> social media.</p>
-                <div className="flex items-center gap-2 my-3">
-                    <MdEmail className="size-6 text-orange-400" />
-                    <h3>Email: modernhotel@gmail.com</h3>
+        <div className="">
+            <div className=" md:grid md:grid-cols-2 lg:grid-cols-4 pt-20 pb-14 items-center ">
+                {/* ---Section-01--- */}
+                <div className="text-white">
+                    <h1 className="text-white text-3xl font-bold">MODERN HOTEL</h1>
+                    <p className="text-gray-300 mt-3">Contact us to know about the Hotel <br /> or you can know about us through <br /> social media.</p>
+                    <div className="flex items-center gap-2 my-3">
+                        <MdEmail className="size-6 text-orange-400" />
+                        <h3>Email: modernhotel@gmail.com</h3>
+                    </div>
+                    <div className="flex items-center gap-7 mt-1 mb-2">
+                        <a href="https://www.facebook.com/">
+                            <FaFacebookSquare className="size-7" />
+                        </a>
+                        <a href="https://x.com/">
+                            <FaTwitter className="size-7" />
+                        </a>
+                        <a href="https://www.linkedin.com/">
+                            <FaLinkedin className="size-7" />
+                        </a>
+                        <a href="https://www.instagram.com/">
+                            <FaSquareInstagram className="size-7" />
+                        </a>
+                    </div>
                 </div>
-                <div className="flex items-center gap-7 mt-1 mb-2">
-                    <a href="https://www.facebook.com/">
-                        <FaFacebookSquare className="size-7" />
-                    </a>
-                    <a href="https://x.com/">
-                        <FaTwitter className="size-7" />
-                    </a>
-                    <a href="https://www.linkedin.com/">
-                        <FaLinkedin className="size-7" />
-                    </a>
-                    <a href="https://www.instagram.com/">
-                        <FaSquareInstagram className="size-7" />
-                    </a>
+                {/* ---Section-02--- */}
+                <div className="text-white md:justify-self-center mt-10 md:mt-10 lg:mt-0">
+                    <h1 className="text-xl font-semibold">Explore</h1>
+                    <div className="w-[73px] border-t"></div>
+                    <div className="flex flex-col gap-2 mt-5">
+                        <Link to="/" className="flex items-center text-base text-gray-300">
+                            <MdKeyboardDoubleArrowRight className="size-5" />
+                            <span>Home</span>
+                        </Link>
+                        <Link to="/rooms" className="flex items-center text-base text-gray-300">
+                            <MdKeyboardDoubleArrowRight className="size-5" />
+                            <span>Rooms</span>
+                        </Link>
+                        <Link to="/myBooking" className="flex items-center text-base text-gray-300">
+                            <MdKeyboardDoubleArrowRight className="size-5" />
+                            <span>My Booking</span>
+                        </Link>
+                        <Link to="/aboutUs" className="flex items-center text-base text-gray-300">
+                            <MdKeyboardDoubleArrowRight className="size-5" />
+                            <span>About Us</span>
+                        </Link>
+                        <Link to="/contactUs" className="flex items-center text-base text-gray-300">
+                            <MdKeyboardDoubleArrowRight className="size-5" />
+                            <span>Contact Us</span>
+                        </Link>
+                    </div>
                 </div>
-            </div>
-            {/* ---Section-02--- */}
-            <div className="text-white">
-                <h1 className="text-xl font-semibold">Explore</h1>
-                <div className="w-[73px] border-t"></div>
-                <div className="flex flex-col gap-2 mt-5">
-                    <Link to="/" className="flex items-center text-base text-gray-300">
-                        <MdKeyboardDoubleArrowRight className="size-5" />
-                        <span>Home</span>
-                    </Link>
-                    <Link to="/rooms" className="flex items-center text-base text-gray-300">
-                        <MdKeyboardDoubleArrowRight className="size-5" />
-                        <span>Rooms</span>
-                    </Link>
-                    <Link to="/myBooking" className="flex items-center text-base text-gray-300">
-                        <MdKeyboardDoubleArrowRight className="size-5" />
-                        <span>My Booking</span>
-                    </Link>
-                    <Link to="/aboutUs" className="flex items-center text-base text-gray-300">
-                        <MdKeyboardDoubleArrowRight className="size-5" />
-                        <span>About Us</span>
-                    </Link>
-                    <Link to="/contactUs" className="flex items-center text-base text-gray-300">
-                        <MdKeyboardDoubleArrowRight className="size-5" />
-                        <span>Contact Us</span>
-                    </Link>
+                {/* ---Section-03--- */}
+                <div className="text-white mt-10 md:mt-10 lg:mt-0 md:justify-self-center">
+                    <div>
+                        <h1 className="text-lg font-semibold">Address:</h1>
+                        <div className="w-[75px] border-t"></div>
+                        <p className="text-base text-gray-300 mt-5">775 5th Ave, Dhaka,</p>
+                        <p className="text-base text-gray-300">BD 1205 Bangladesh</p>
+                    </div>
+                    <div className="mt-10 md:mt-10 lg:mt-0">
+                        <h1 className="text-lg font-semibold">Hours:</h1>
+                        <p className="text-base text-gray-300 mt-2">9.30am - 6.30pm</p>
+                        <p className="text-base text-gray-300">Friday to Thursday</p>
+                    </div>
                 </div>
-            </div>
-            {/* ---Section-03--- */}
-            {/* <div className="text-white md:mt-10 lg:mt-0">
-                <h1 className="text-xl font-semibold">Services</h1>
-                <div className="flex flex-col gap-2 mt-5">
-                    <Link to="/allVisas" className="flex items-center text-base text-gray-300">
-                        <MdKeyboardDoubleArrowRight className="size-5" />
-                        <span>Qatar</span>
-                    </Link>
-                    <Link to="/addVisa" className="flex items-center text-base text-gray-300">
-                        <MdKeyboardDoubleArrowRight className="size-5" />
-                        <span>Australia</span>
-                    </Link>
-                    <Link to="/myAddedVisas" className="flex items-center text-base text-gray-300">
-                        <MdKeyboardDoubleArrowRight className="size-5" />
-                        <span>United State</span>
-                    </Link>
-                    <Link to="/myVisaApplications" className="flex items-center text-base text-gray-300">
-                        <MdKeyboardDoubleArrowRight className="size-5" />
-                        <span>Malaysia</span>
-                    </Link>
-                    <Link to="/contact" className="flex items-center text-base text-gray-300">
-                        <MdKeyboardDoubleArrowRight className="size-5" />
-                        <span>Canada</span>
-                    </Link>
-                </div>
-            </div> */}
-            {/* ---Section-04--- */}
-            <div className="text-white mt-0 md:mt-10 lg:mt-0">
-                <div>
-                    <h1 className="text-lg font-semibold">Address:</h1>
-                    <div className="w-[75px] border-t"></div>
-                    <p className="text-base text-gray-300 mt-5">775 5th Ave, Dhaka,</p>
-                    <p className="text-base text-gray-300">BD 1205 Bangladesh</p>
-                </div>
-                <div className="mt-3">
-                    <h1 className="text-lg font-semibold">Hours:</h1>
-                    <p className="text-base text-gray-300 mt-2">9.30am - 6.30pm</p>
-                    <p className="text-base text-gray-300">Saturday to Thursday</p>
-                </div>
-
-            </div>
+                {/* ---Section-04--- */}
+                <form className="mt-10 md:mt-10 lg:mt-0">
+                    <h6 className="footer-title text-white">Modern Hotel</h6>
+                    <fieldset className="form-control w-80">
+                        <label className="label">
+                            <span className="label-text text-white">Enter your email address</span>
+                        </label>
+                        <div className="join">
+                            <input
+                                type="text"
+                                placeholder="username@site.com"
+                                className="input input-bordered join-item" />
+                            <button className="btn btn-primary join-item">Subscribe</button>
+                        </div>
+                    </fieldset>
+                </form>
+            </div >
+            <div className="divider divider-accent"></div >
+            <footer className="footer footer-center text-white pb-5">
+                <aside>
+                    <p className="text-base">Copyright © {new Date().getFullYear()} - All right reserved by MODERN HOTEL Ltd</p>
+                </aside>
+            </footer>
         </div >
     );
 };

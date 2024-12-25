@@ -21,11 +21,11 @@ const Home = () => {
             </div>
             {/* SpecialOffer */}
             <div className="w-10/12 mx-auto my-20">
-                <h1 className="text-3xl text-black font-semibold text-center mb-16 font-gildaFont">Special Offer for Winter</h1>
+                <h1 className="text-xl md:text-3xl text-black font-semibold text-center mb-16 font-gildaFont">Special Offer for Winter</h1>
                 <SpecialOffer></SpecialOffer>
             </div>
             {/* React-Count */}
-            <div className="w-10/12 mx-auto my-24">
+            <div className="w-10/12 mx-auto my-44">
                 <Count></Count>
             </div>
             {/* FeaturedRooms */}

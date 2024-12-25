@@ -20,7 +20,7 @@ const FeaturedRoomCard = ({ roomData }) => {
                             alt="hotel1.png" />
                     </div>
                     {/* Room Name */}
-                    <div className="px-7 py-5">
+                    <div className="px-7 pt-5 pb-1">
                         <div>
                             <h1 className="text-[22px] text-black font-medium">{roomName}</h1>
                         </div>
@@ -47,11 +47,15 @@ const FeaturedRoomCard = ({ roomData }) => {
                                 // onChange={ratingChanged}
                                 size={24}
                                 color2={'#ffd700'} ></ReactStars>
-                            <p className="text-lg font-semibold bg-yellow-100 px-3 rounded-lg mt-2 md:mt-0">{totalReviews} <span className="text-xs">Review</span> </p>
+                            <p className="text-lg font-semibold bg-[#fbf83c8c] px-3 rounded-lg mt-2 md:mt-0">{totalReviews} <span className="text-xs">Review</span> </p>
                         </div>
                         {/* Price */}
-                        <div className="">
+                        {/* <div className="">
                             <h3 className="bg-white w-20 px-5 py-1 drop-shadow-md rounded-xl">${price}</h3>
+                        </div> */}
+                        {/* Price */}
+                        <div className=" mb-5">
+                            <h3 className="w-32 bg-white text-green-600 px-5 py-1 drop-shadow-md rounded-xl">Price: $<span className="text-lg font-medium">{price}</span></h3>
                         </div>
                     </div>
                 </div>

@@ -49,11 +49,11 @@ const RoomCard = ({ roomData }) => {
                                 // onChange={ratingChanged}
                                 size={24}
                                 color2={'#ffd700'} ></ReactStars>
-                            <p className="text-lg font-semibold bg-green-100 px-3 rounded-lg">{totalReviews} <span className="text-xs">Review</span> </p>
+                            <p className="text-lg font-semibold bg-[#fbf83c8c] px-3 rounded-lg">{totalReviews} <span className="text-xs">Review</span> </p>
                         </div>
                         {/* Price */}
-                        <div className="">
-                            <h3 className="bg-white w-20 px-5 py-1 drop-shadow-md rounded-xl">${price}</h3>
+                        <div className=" mb-5">
+                            <h3 className="w-32 bg-white text-green-600 px-5 py-1 drop-shadow-md rounded-xl">Price: $<span className="text-lg font-medium">{price}</span></h3>
                         </div>
                     </div>
                 </div>

@@ -168,10 +168,11 @@ const Register = () => {
                         </div>
                     </div>
                     {/* Register Button */}
-                    <div className="form-control mt-6">
-                        <button className="btn btn-primary">Register</button>
-                        <p className="text-center my-3">Already have an Account. Please <NavLink to="/login" className="text-green-600">Login</NavLink> </p>
-                    </div>
+                        {/* ---Login Button--- */}
+                        <div className="form-control mt-6">
+                            <button type="button" className="text-white bg-gradient-to-r from-teal-400 via-teal-500 to-teal-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-teal-300 dark:focus:ring-teal-800 font-medium rounded-lg text-lg px-5 py-1.5 text-center me-2 mb-2">Register</button>
+                            <p className="mt-3 text-center">Already have an Account. Please <NavLink to="/login" className="text-lg font-medium text-green-600 mt-3">Login</NavLink> </p>
+                        </div>
                     {/* Google and Github Login */}
                     <div className="flex items-center justify-center gap-5 mt-5">
                         <div className="">

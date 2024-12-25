@@ -18,7 +18,7 @@ const MainLayout = () => {
             </div>
             {/* Footer */}
             <div className="bg-slate-800 mt-24">
-            <div className="w-11/12 mx-auto">
+            <div className="w-10/12 mx-auto">
                 <Footer></Footer>
             </div>
             </div>

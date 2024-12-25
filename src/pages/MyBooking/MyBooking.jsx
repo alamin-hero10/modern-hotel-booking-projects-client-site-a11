@@ -70,12 +70,12 @@ const MyBooking = () => {
 
     // ---Return---
     return (
-        <div className="w-9/12 mx-auto my-10">
+        <div className="md:w-9/12 md:mx-auto mx-3 my-10">
             <Helmet>
                 <title>My Booking| Modern Hotel</title>
             </Helmet>
             {/* My Booking Room Count */}
-            <div>
+            <div className="">
                 <h3 className="text-lg font-semibold">My Booking Room: <span className="bg-[#ECFDF5] text-xs text-[#059669] px-3 py-1 rounded-3xl">{rooms.length} Room</span></h3>
             </div>
             {/* ---Table Formate--- */}
