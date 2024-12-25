@@ -4,11 +4,11 @@ import Count from "../../components/Count/Count";
 import FeaturedRooms from "../../components/FeaturedRooms/FeaturedRooms";
 import RoomFurniture from "../../components/RoomFurniture/RoomFurniture";
 import SpecialOffer from "../../components/SpecialOffer/SpecialOffer";
-import Map from "../../Map/Map";
+import PigeonMaps from "../../Map/PigeonMaps";
+import BookingOfferModal from "../../components/BookingOfferModal/BookingOfferModal";
 
 
 const Home = () => {
-
 
     return (
         <div className="">
@@ -38,13 +38,13 @@ const Home = () => {
             <div>
                 <RoomFurniture></RoomFurniture>
             </div>
-            {/* others */}
+            {/* Pigeon Maps */}
             <div>
-                {/* <Map></Map> */}
+                <PigeonMaps></PigeonMaps>
             </div>
-            {/* Map */}
+            {/* Offer-Modal */}
             <div>
-                {/* <Map></Map> */}
+                <BookingOfferModal></BookingOfferModal>
             </div>
         </div>
     );

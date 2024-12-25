@@ -16,6 +16,7 @@
     "firebase": "^11.1.0",
     "leaflet": "^1.9.4",
     "motion": "^11.15.0",
+    "pigeon-maps": "^0.22.0",
     "react": "^19.0.0-rc.1",
     "react-countup": "^6.5.3",
     "react-datepicker": "^7.5.0",

@@ -5,6 +5,7 @@ import { FcGoogle } from "react-icons/fc";
 import { AuthContext } from "../../components/AuthProvider/AuthProvider";
 import { FaGithub } from "react-icons/fa";
 import { Helmet } from "react-helmet";
+import axios from "axios";
 
 const Login = () => {
 
@@ -60,17 +61,15 @@ const Login = () => {
     }
 
     // -----Google Login Handler-----
-    const googleLoginHandler = (email) => {
+    const googleLoginHandler = async (email) => {
         toast("Google Log in Successfully")
-        console.log(email)
-        handleGoogleLogin()
-            .then(result => {
-                navigate("/")
-                console.log(result)
-            })
-            .catch(error => {
-                setError(error.message)
-            })
+        try {
+            await handleGoogleLogin()
+            navigate("/")
+        }
+        catch (error) {
+            setError(error.message)
+        }
     }
 
     // -----Forgot Password Handler-----

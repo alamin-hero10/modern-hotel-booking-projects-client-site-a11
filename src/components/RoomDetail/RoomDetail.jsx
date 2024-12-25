@@ -17,12 +17,10 @@ const RoomDetail = () => {
     return (
         <div className="w-8/12 mx-auto my-20">
             <div className="md:flex items-center gap-10">
-                <div>
-                    <img
-                        className="w-[640px] border border-solid border-green-500 p-2"
-                        src={roomImage}
-                        alt="" />
-                </div>
+                <img
+                    className="w-[640px] border border-solid border-green-500 p-2"
+                    src={roomImage}
+                    alt="" />
                 <div className="mt-7 md:mt-0">
                     <div className="md:flex items-center justify-between">
                         <div>

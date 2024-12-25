@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { LuMapPin } from "react-icons/lu";
 import { Link } from "react-router-dom";
 import ReactStars from "react-stars";
@@ -8,8 +9,11 @@ const RoomCard = ({ roomData }) => {
 
     const { _id, roomName, roomImage, price, totalReviews, location, stayDetails } = roomData || {};
 
+
+
     return (
         <div>
+            {/* ---Room Card--- */}
             <Link to={`/roomDetails/${_id}`}>
                 {/* <div className="w-[380px] drop-shadow-2xl bg-white rounded-xl"> */}
                 <div className="drop-shadow-2xl bg-white rounded-xl">
@@ -22,7 +26,7 @@ const RoomCard = ({ roomData }) => {
                             alt="hotel1.png" />
                     </div>
                     {/* Room Name */}
-                    <div className="px-7 py-5">
+                    <div className="px-7 pt-5 pb-1">
                         <div>
                             <h1 className="text-[22px] text-black font-medium">{roomName}</h1>
                         </div>
