@@ -5,7 +5,6 @@ import Home from "../../pages/Home/Home";
 import Login from "../../pages/Login/Login";
 import Register from "../../pages/Register/Register";
 import Rooms from "../../pages/Rooms/Rooms";
-import MyBookingRoom from "../../pages/MyBookingRoom/MyBookingRoom";
 import MyBooking from "../../pages/MyBooking/MyBooking";
 import PrivetRoute from "../PrivetRoutes/PrivetRoute";
 import RoomDetail from "../../components/RoomDetail/RoomDetail";
@@ -34,12 +33,6 @@ const Router = createBrowserRouter([
             {
                 path: "/rooms",
                 element: <Rooms></Rooms>
-            },
-            {
-                path: "/myBookingRoom",
-                element: <PrivetRoute>
-                    <MyBookingRoom></MyBookingRoom>
-                </PrivetRoute>
             },
             {
                 path: "/myBooking",
