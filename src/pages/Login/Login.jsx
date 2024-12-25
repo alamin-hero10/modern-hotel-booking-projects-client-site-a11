@@ -5,7 +5,6 @@ import { FcGoogle } from "react-icons/fc";
 import { AuthContext } from "../../components/AuthProvider/AuthProvider";
 import { FaGithub } from "react-icons/fa";
 import { Helmet } from "react-helmet";
-import axios from "axios";
 
 const Login = () => {
 

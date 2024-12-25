@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import ReactStars from "react-stars";
 import bed from "../../assets/double-bed.png"
 import night from "../../assets/moon-and-star.png"
+import 'animate.css';
 
 const RoomCard = ({ roomData }) => {
 
@@ -12,15 +13,13 @@ const RoomCard = ({ roomData }) => {
 
 
     return (
-        <div>
+        <div className="animate__animated animate__zoomIn animate__delay-1s">
             {/* ---Room Card--- */}
             <Link to={`/roomDetails/${_id}`}>
-                {/* <div className="w-[380px] drop-shadow-2xl bg-white rounded-xl"> */}
                 <div className="drop-shadow-2xl bg-white rounded-xl">
                     {/* Image */}
                     <div>
                         <img
-                            // className="w-[400px] h-60"
                             className=""
                             src={roomImage}
                             alt="hotel1.png" />
@@ -53,7 +52,7 @@ const RoomCard = ({ roomData }) => {
                                 // onChange={ratingChanged}
                                 size={24}
                                 color2={'#ffd700'} ></ReactStars>
-                            <p className="text-lg font-semibold bg-[#fbf83c8c] px-3 rounded-lg">{totalReviews} <span className="text-xs">Review</span> </p>
+                            <p className="w-24 text-lg font-semibold bg-[#fbf83c8c] px-3 rounded-lg">{totalReviews} <span className="text-xs">Review</span> </p>
                         </div>
                         {/* Price */}
                         <div className=" mb-5">

@@ -2,7 +2,7 @@
 const AboutUs = () => {
     return (
         <div>
-            <p>About Us Pages</p>
+            <h1 className="text-3xl font-semibold text-center mt-10">About Us</h1>
         </div>
     );
 };

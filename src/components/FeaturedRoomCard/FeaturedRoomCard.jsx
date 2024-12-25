@@ -3,13 +3,14 @@ import bed from "../../assets/double-bed.png"
 import night from "../../assets/moon-and-star.png"
 import ReactStars from "react-stars";
 import { LuMapPin } from "react-icons/lu";
+import 'animate.css';
 
 const FeaturedRoomCard = ({ roomData }) => {
 
     const { _id, roomName, roomImage, price, totalReviews, location, stayDetails } = roomData || {};
 
     return (
-        <div className="">
+        <div className="animate__animated animate__zoomIn animate__delay-1s">
             <Link to={`/roomDetails/${_id}`}>
                 <div className="drop-shadow-2xl bg-white rounded-xl">
                     {/* Image */}
@@ -41,13 +42,13 @@ const FeaturedRoomCard = ({ roomData }) => {
                             </div>
                         </div>
                         {/* Review */}
-                        <div className="md:flex items-center gap-3 my-5">
+                        <div className="flex items-center gap-3 my-5">
                             <ReactStars
                                 count={5}
                                 // onChange={ratingChanged}
                                 size={24}
                                 color2={'#ffd700'} ></ReactStars>
-                            <p className="text-lg font-semibold bg-[#fbf83c8c] px-3 rounded-lg mt-2 md:mt-0">{totalReviews} <span className="text-xs">Review</span> </p>
+                            <p className="w-24 text-lg font-semibold bg-[#fbf83c8c] px-3 rounded-lg mt-2 md:mt-0">{totalReviews} <span className="text-xs">Review</span> </p>
                         </div>
                         {/* Price */}
                         {/* <div className="">

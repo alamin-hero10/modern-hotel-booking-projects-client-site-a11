@@ -26,7 +26,9 @@ const MyBooking = () => {
 
     // ---Axios DB Fetch the Data---
     const fetchAllRooms = async () => {
-        const { data } = await axios.get(`http://localhost:5110/add-booking/${user?.email}`)
+        const { data } = await axios.get(`http://localhost:5110/add-booking/${user?.email}`,
+            { withCredentials: true }
+        )
         setRooms(data)
     }
     // ---Return---

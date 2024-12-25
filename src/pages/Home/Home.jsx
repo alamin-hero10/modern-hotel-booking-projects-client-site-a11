@@ -20,17 +20,19 @@ const Home = () => {
                 <Banner></Banner>
             </div>
             {/* SpecialOffer */}
-            <div className="w-10/12 mx-auto my-20">
+            <div className="bg-[#fdfdff]">
+                <div className="w-10/12 mx-auto py-20">
                 <h1 className="text-xl md:text-3xl text-black font-semibold text-center mb-16 font-gildaFont">Special Offer for Winter</h1>
                 <SpecialOffer></SpecialOffer>
             </div>
+            </div>
             {/* React-Count */}
-            <div className="w-10/12 mx-auto my-44">
+            <div className="w-10/12 mx-auto my-32">
                 <Count></Count>
             </div>
             {/* FeaturedRooms */}
-            <div className="my-20 bg-[#f9fafc]">
-                <div className="w-10/12 md:w-8/12 mx-auto my-20 bg-[#f9fafc] py-20">
+            <div className="my-20 bg-[#fdfeff] md:py-24">
+                <div className="w-10/12 md:w-8/12 mx-auto">
                     <FeaturedRooms></FeaturedRooms>
                 </div>
             </div>

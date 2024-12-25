@@ -5,11 +5,12 @@ import guests from "../../assets/guests.png"
 import hotel from "../../assets/hotel.png"
 import livingRoom from "../../assets/living-room.png"
 import chair from "../../assets/chair.png"
+import 'animate.css';
 
 const Count = () => {
     return (
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5 mx-auto animate__animated animate__bounceInRight animate__delay-.5s animate__slower">
-            <div className="flex items-center justify-center gap-3">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5 mx-auto">
+            <div className="flex items-center justify-center gap-3 animate__animated animate__bounceInLeft animate__delay-.5s animate__slower">
                 <img className="w-16 h-16" src={guests} alt="" />
                 <div className="ml-2">
                     <div className="flex items-center">
@@ -25,7 +26,7 @@ const Count = () => {
                     <p className="text-lg text-gray-500 mt-1">Guests</p>
                 </div>
             </div>
-            <div className="flex items-center justify-center gap-3">
+            <div className="flex items-center justify-center gap-3 animate__animated animate__bounceInLeft animate__delay-.5s animate__slower">
                 <img className="w-14 h-14" src={hotel} alt="" />
                 <div className="ml-2">
                     <div className="flex items-center">
@@ -41,7 +42,7 @@ const Count = () => {
                     <p className="text-lg text-gray-500 mt-1">Hotels</p>
                 </div>
             </div>
-            <div className="flex items-center justify-center gap-3">
+            <div className="flex items-center justify-center gap-3 animate__animated animate__bounceInRight animate__delay-.5s animate__slower">
                 <img className="w-14 h-14" src={livingRoom} alt="" />
                 <div className="ml-2">
                     <div className="flex items-center">
@@ -57,7 +58,7 @@ const Count = () => {
                     <p className="text-lg text-gray-500 mt-1">Rooms</p>
                 </div>
             </div>
-            <div className="flex items-center justify-center gap-3">
+            <div className="flex items-center justify-center gap-3 animate__animated animate__bounceInRight animate__delay-.5s animate__slower">
                 <img className="w-14 h-14" src={chair} alt="" />
                 <div className="ml-2">
                     <div className="flex items-center">

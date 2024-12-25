@@ -17,16 +17,16 @@ const Footer = () => {
                     </div>
                     <div className="flex items-center gap-7 mt-1 mb-2">
                         <a href="https://www.facebook.com/">
-                            <FaFacebookSquare className="size-7" />
+                            <FaFacebookSquare className="size-7 text-[#1877F2]" />
                         </a>
                         <a href="https://x.com/">
-                            <FaTwitter className="size-7" />
+                            <FaTwitter className="size-7 text-[#03A9F4]" />
                         </a>
                         <a href="https://www.linkedin.com/">
-                            <FaLinkedin className="size-7" />
+                            <FaLinkedin className="size-7 text-[#0077B7]" />
                         </a>
                         <a href="https://www.instagram.com/">
-                            <FaSquareInstagram className="size-7" />
+                            <FaSquareInstagram className="size-7 text-[#f6a75c]" />
                         </a>
                     </div>
                 </div>
@@ -87,13 +87,7 @@ const Footer = () => {
                         </div>
                     </fieldset>
                 </form>
-            </div >
-            <div className="divider divider-accent"></div >
-            <footer className="footer footer-center text-white pb-5">
-                <aside>
-                    <p className="text-base">Copyright © {new Date().getFullYear()} - All right reserved by MODERN HOTEL Ltd</p>
-                </aside>
-            </footer>
+            </div>
         </div >
     );
 };

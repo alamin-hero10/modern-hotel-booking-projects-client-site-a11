@@ -16,11 +16,19 @@ const MainLayout = () => {
                 <Outlet>
                 </Outlet>
             </div>
-            {/* Footer */}
-            <div className="bg-slate-800 mt-24">
-            <div className="w-10/12 mx-auto">
-                <Footer></Footer>
-            </div>
+            {/* ---Footer--- */}
+            <div className="bg-slate-800 mt-20">
+                <div className="w-10/12 mx-auto">
+                    <Footer></Footer>
+                </div>
+                {/* Divider */}
+                <div className="border-b border-solid border-[#5EEAD4]"></div >
+                {/* CopyRight */}
+                <footer className="footer footer-center text-white py-5">
+                    <aside>
+                        <p className="text-base">Copyright © {new Date().getFullYear()} - All right reserved by MODERN HOTEL Ltd</p>
+                    </aside>
+                </footer>
             </div>
         </div>
     );

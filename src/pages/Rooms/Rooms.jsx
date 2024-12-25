@@ -30,10 +30,8 @@ const Rooms = () => {
                 <meta name="description" content="Nested component" />
             </Helmet>
             {/* ---Sorting--- */}
-            <div className="flex items-center justify-between mb-7">
-                <div>
-                    <h1 className="text-2xl font-medium bg-green-100 rounded-xl py-1 px-3">Choose The Room:</h1>
-                </div>
+            <div className="md:flex items-center justify-between mb-7">
+                <h1 className="text-2xl font-medium bg-green-100 rounded-xl py-1 px-3 mb-5 md:mb-0">Choose The Room:</h1>
                 {/* ---Sorting--- */}
                 <div className="">
                     <select
@@ -46,7 +44,7 @@ const Rooms = () => {
                 </div>
             </div>
             {/* ---Rooms Map--- */}
-            <div className="grid grid-cols-1 gap-7 md:grid-cols-3 md:gap-12 lg:grid-cols-4">
+            <div className="grid grid-cols-1 gap-7 md:grid-cols-2 md:gap-12 lg:grid-cols-4">
                 {
                     rooms.map((room) => <RoomCard key={room._id} roomData={room}></RoomCard>)
                 }

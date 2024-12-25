@@ -1,7 +1,7 @@
 import { Link, NavLink } from "react-router-dom";
 import { useContext, useState } from "react";
 import { AuthContext } from "../AuthProvider/AuthProvider";
-import  "../Navbar/Navbar.css";
+import "../Navbar/Navbar.css";
 
 // import logo and images
 import logo from "../../assets/logo.png"
@@ -63,7 +63,6 @@ const Navbar = () => {
             {/* NavLink */}
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1 gap-10">
-                    {/* <NavLink to="/" className="text-lg font-medium text-gray-700 uppercase"><button onClick={() => document.getElementById('my_modal_4').showModal()}></button>HOME</NavLink> */}
                     <NavLink to="/" className="text-lg text-black font-base uppercase">Home</NavLink>
                     <NavLink to="/rooms" className="text-lg text-black font-base uppercase">Rooms</NavLink>
                     <NavLink to="/myBooking" className="text-lg text-black font-base uppercase">My Booking</NavLink>
@@ -113,7 +112,7 @@ const Navbar = () => {
                                                 </div>
                                                 <div className="text-center my-3">
                                                     {user?.displayName &&
-                                                        <button onClick={handleLogOut} className="w-full border border-solid border-gray-500 text-xl font-normal bg-[#015CB5] text-white py-1 px-10 rounded-md">Log Out</button> || ""}
+                                                        <button onClick={handleLogOut} type="button" className="text-white bg-gradient-to-r from-teal-400 via-teal-500 to-teal-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-teal-300 dark:focus:ring-teal-800 font-medium rounded-lg text-lg px-5 py-1.5 text-center me-2 mb-2">Logout</button> || ""}
                                                 </div>
                                             </div>
                                         </div>
@@ -121,8 +120,10 @@ const Navbar = () => {
                                 </>
                                     :
                                     <>
-                                        <Link to="/login" className="text-lg font-normal text-white bg-[#015CB5] py-2 px-6 rounded-md ml-3 hover:bg-[#13af42]">Login</Link>
-                                        <Link to="/register" className="text-lg font-normal text-white bg-[#015CB5] py-2 px-3 rounded-md ml-3 hover:bg-[#13af42]">Register</Link>
+                                        <div className="flex flex-col md:flex md:flex-row">
+                                            <Link to="/login" className="text-white bg-gradient-to-r from-teal-400 via-teal-500 to-teal-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-teal-300 dark:focus:ring-teal-800 font-medium rounded-lg text-lg px-5 py-1.5 text-center me-2 mb-2">Login</Link>
+                                            <Link to="/register" className="text-white bg-gradient-to-r from-teal-400 via-teal-500 to-teal-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-teal-300 dark:focus:ring-teal-800 font-medium rounded-lg text-lg px-5 py-1.5 text-center me-2 mb-2">Register</Link>
+                                        </div>
                                     </>
                             }
                         </div>

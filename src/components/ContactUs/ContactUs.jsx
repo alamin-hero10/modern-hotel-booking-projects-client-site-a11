@@ -2,7 +2,7 @@
 const ContactUs = () => {
     return (
         <div>
-            <p>Contact Us Pages</p>
+            <h1 className="text-3xl font-semibold text-center mt-10">Contact Us</h1>
         </div>
     );
 };
