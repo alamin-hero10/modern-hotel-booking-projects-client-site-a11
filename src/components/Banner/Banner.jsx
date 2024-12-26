@@ -37,7 +37,7 @@ const Banner = () => {
                     modules={[Autoplay, Pagination, Navigation]}
                     className="mySwiper"
                 >
-                    {/* Swiper-Slide 01 */}
+                    {/* Swiper-Slide-01 */}
                     <SwiperSlide>
                         <div className="hero place-items-stretch">
                             <div>
@@ -48,13 +48,13 @@ const Banner = () => {
                                 <div className="max-w-md">
                                     <h1 className="mb-5 text-3xl md:text-5xl font-bold">Experience Comfort and Luxury Like Never Before</h1>
                                     <p className="mb-5">
-                                        Welcome to Modern Hotel, your gateway to unforgettable stays. Whether you're traveling for leisure or business, our exquisite accommodations and top-notch services ensure a seamless and delightful experience. Book your stay today and let us redefine comfort for you.
+                                        Welcome to Modern Hotel, your gateway to unforgettable stays. Whether you are traveling for leisure or business, our exquisite accommodations and top-notch services ensure a seamless and delightful experience. Book your stay today and let us redefine comfort for you.
                                     </p>
                                 </div>
                             </div>
                         </div>
                     </SwiperSlide>
-                    {/* Swiper-Slide 02 */}
+                    {/* Swiper-Slide-02 */}
                     <SwiperSlide>
                         <div className="hero place-items-stretch h-[600px]">
                             <div>
@@ -71,7 +71,7 @@ const Banner = () => {
                             </div>
                         </div>
                     </SwiperSlide>
-                    {/* Swiper-Slide 03 */}
+                    {/* Swiper-Slide-03 */}
                     <SwiperSlide>
                         <div className="hero place-items-stretch h-[600px]">
                             <div>
@@ -82,13 +82,13 @@ const Banner = () => {
                                 <div className="max-w-md">
                                     <h1 className="mb-5 text-3xl md:text-5xl font-bold">Where Every Stay Feels Like Home</h1>
                                     <p className="mb-5">
-                                        Step into Modern Hotel, where comfort meets elegance. Our thoughtfully designed rooms and personalized services make every guest feel at home, whether you're here for business or leisure.
+                                        Step into Modern Hotel, where comfort meets elegance. Our thoughtfully designed rooms and personalized services make every guest feel at home, whether you are here for business or leisure.
                                     </p>
                                 </div>
                             </div>
                         </div>
                     </SwiperSlide>
-                    {/* Swiper-Slide 04 */}
+                    {/* Swiper-Slide-04 */}
                     <SwiperSlide>
                         <div className="hero place-items-stretch h-[600px]">
                             <div>
@@ -105,7 +105,7 @@ const Banner = () => {
                             </div>
                         </div>
                     </SwiperSlide>
-                    {/* Swiper-Slide 05 */}
+                    {/* Swiper-Slide-05 */}
                     <SwiperSlide>
                         <div className="hero place-items-stretch h-[600px]">
                             <div>
@@ -122,7 +122,7 @@ const Banner = () => {
                             </div>
                         </div>
                     </SwiperSlide>
-                    {/* Swiper-Slide 06 */}
+                    {/* Swiper-Slide-06 */}
                     <SwiperSlide>
                         <div className="hero place-items-stretch h-[600px]">
                             <div>

@@ -28,23 +28,6 @@ const Login = () => {
         handleLogIn(email, password)
             .then(result => {
                 navigate("/")
-
-                // Update Last Login Time:
-                // const lastSignInTime = result?.user?.metadata?.lastSignInTime;
-                // const logInInfo = { email, lastSignInTime };
-
-                // fetch:
-                // fetch(``, {
-                //     method: "PATCH",
-                //     headers: {
-                //         "content-type": "application/json"
-                //     },
-                //     body: JSON.stringify(logInInfo)
-                // })
-                //     .then(res => res.json())
-                //     .then(data => {
-                //         console.log(data)
-                //     })
             })
             .catch(error => {
                 setError(error.message)

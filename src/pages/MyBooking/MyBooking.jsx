@@ -10,23 +10,21 @@ import { format } from 'date-fns'
 
 const MyBooking = () => {
 
-
     // ---useContext---
     const { user } = useContext(AuthContext);
 
     // ---UseState---
     const [rooms, setRooms] = useState([]);
-    console.log(rooms)
 
     // ---UseEffect---
     useEffect(() => {
         fetchAllRooms()
-        // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [user]);
 
     // ---Axios DB Fetch the Data---
     const fetchAllRooms = async () => {
-        const { data } = await axios.get(`http://localhost:5110/add-booking/${user?.email}`,
+        const { data } = await axios.get(`${import.meta.env.VITE_API_URL}/add-booking/${user?.email}`,
             { withCredentials: true }
         )
         setRooms(data)
@@ -34,7 +32,7 @@ const MyBooking = () => {
     // ---Return---
     const handleCancel = async (id) => {
         try {
-            const { data } = await axios.delete(`http://localhost:5110/room-delete/${id}`)
+            const { data } = await axios.delete(`${import.meta.env.VITE_API_URL}/room-delete/${id}`)
             console.log(data)
             fetchAllRooms()
         }

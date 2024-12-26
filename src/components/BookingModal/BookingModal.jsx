@@ -53,7 +53,7 @@ const BookingModal = () => {
 
         // Try - Catch Block and Make Post Request:
         try{
-            const { data } = await axios.post(`http://localhost:5110/add-booking`, bookingData)
+            const { data } = await axios.post(`${import.meta.env.VITE_API_URL}/add-booking`, bookingData)
             console.log(data)
             if(data){
                 Swal.fire({
@@ -69,10 +69,7 @@ const BookingModal = () => {
         }
     }
 
-
-    // https://modern-hotel-server-projects-a11.vercel.app
-
-
+    // ---Return---
     return (
         <div>
             <dialog id="my_modal_4" className="modal">

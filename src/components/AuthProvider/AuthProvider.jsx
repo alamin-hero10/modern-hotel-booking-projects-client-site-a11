@@ -54,7 +54,7 @@ const AuthProvider = ({ children }) => {
                 setUser(currentUser)
                 setSuccess(currentUser)
                 // Generate Token:
-                const { data } = await axios.post(`http://localhost:5110/jwt`, {
+                const { data } = await axios.post(`${import.meta.env.VITE_API_URL}/jwt`, {
                     email: currentUser?.email
                 },
                     { withCredentials: true }
@@ -64,9 +64,10 @@ const AuthProvider = ({ children }) => {
             else {
                 setUser(null)
                 // Generate Token (Get):
-                const { data } = await axios.get(`http://localhost:5110/logout`,
+                const { data } = await axios.get(`${import.meta.env.VITE_API_URL}/logout`,
                     { withCredentials: true }
                 )
+                console.log(data)
             }
             setLoading(false)
 

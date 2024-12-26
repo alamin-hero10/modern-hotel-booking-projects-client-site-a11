@@ -127,8 +127,7 @@ const RoomDetail = () => {
                     </div>
                     {/* Book Now Button */}
                     <div className="mt-5">
-                        <button onClick={() => document.getElementById('my_modal_4').showModal()} className="text-white md:text-lg  bg-gradient-to-br from-green-400 to-blue-600 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Book Now</button>
-
+                        <button onClick={() => document.getElementById('my_modal_4').showModal()} className="text-white md:text-lg  bg-gradient-to-br from-green-400 to-blue-600 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800 font-medium rounded-lg text-sm px-4 py-2 text-center me-2 mb-2">Book Now</button>
                     </div>
                 </div>
             </div>

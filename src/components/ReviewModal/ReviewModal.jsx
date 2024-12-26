@@ -1,6 +1,6 @@
 // import { useContext } from "react";
 // import { AuthContext } from "../AuthProvider/AuthProvider";
-import { useLoaderData, useParams } from "react-router-dom";
+// import { useLoaderData, useParams } from "react-router-dom";
 
 
 const ReviewModal = () => {
@@ -8,8 +8,8 @@ const ReviewModal = () => {
         // ---useContext---
         // const { user } = useContext(AuthContext);
 
-    const {roomData} = useParams();
-    console.log(roomData)
+    // const {roomData} = useParams();
+    // console.log(roomData)
 
 
     // const { id, roomName, roomImage, price, totalReviews, location, stayDetails, keyFeatures, topCategories, } = roomData;

@@ -6,7 +6,6 @@ import { useEffect, useState } from "react";
 const Rooms = () => {
 
     // useState:
-    // const [filter, setFilter] = useState('');
     const [sort, setSort] = useState('');
 
     // UseState:
@@ -16,7 +15,7 @@ const Rooms = () => {
     useEffect(() => {
         // Axios DB Fetch the Data:
         const fetchAllRooms = async () => {
-            const { data } = await axios.get(`http://localhost:5110/all-rooms?sort=${sort}`)
+            const { data } = await axios.get(`${import.meta.env.VITE_API_URL}/all-rooms?sort=${sort}`)
             setRooms(data)
         }
         fetchAllRooms()

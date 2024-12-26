@@ -11,7 +11,6 @@ const RoomCard = ({ roomData }) => {
     const { _id, roomName, roomImage, price, totalReviews, location, stayDetails } = roomData || {};
 
 
-
     return (
         <div className="animate__animated animate__zoomIn animate__delay-1s">
             {/* ---Room Card--- */}
@@ -54,12 +53,20 @@ const RoomCard = ({ roomData }) => {
                                 color2={'#ffd700'} ></ReactStars>
                             <p className="w-24 text-lg font-semibold bg-[#fbf83c8c] px-3 rounded-lg">{totalReviews} <span className="text-xs">Review</span> </p>
                         </div>
-                        {/* Price */}
-                        <div className=" mb-5">
-                            <h3 className="w-32 bg-white text-green-600 px-5 py-1 drop-shadow-md rounded-xl">Price: $<span className="text-lg font-medium">{price}</span></h3>
+                        {/* Button */}
+                        <div className="flex items-center justify-between mb-5">
+                            {/* Price */}
+                            <div className="">
+                                <h3 className="w-32 bg-white text-green-600 px-5 py-1 drop-shadow-md rounded-xl">Price: $<span className="text-lg font-medium">{price}</span></h3>
+                            </div>
+                            {/* Book Now Button */}
+                            <div className="">
+                                <button onClick={() => document.getElementById('my_modal_4').showModal()} className="text-white md:text-lg  bg-gradient-to-br from-green-400 to-blue-600 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800 font-medium rounded-lg text-sm px-2 py-1 text-center me-2 mb-2">Book Now</button>
+                            </div>
                         </div>
                     </div>
                 </div>
+                {/* <BookingModal></BookingModal> */}
             </Link>
         </div >
     );

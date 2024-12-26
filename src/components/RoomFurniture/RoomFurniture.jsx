@@ -21,7 +21,7 @@ const RoomFurniture = () => {
                 <div className="w-7/12 mx-auto mt-28">
                     <Marquee>
                         <h1 className="text-3xl text-white">
-                            Welcome to Modern Hotel, Your gateway to unforgettable stays. Whether you're traveling for leisure or Business, our Exquisite accommodations and top-notch services ensure a seamless and delightful experience. Book your stay today and let us redefine comfort for you. Experience Comfort and Luxury Like Never Before.
+                            Welcome to Modern Hotel, Your gateway to unforgettable stays. Whether you are traveling for leisure or Business, our Exquisite accommodations and top-notch services ensure a seamless and delightful experience. Book your stay today and let us redefine comfort for you. Experience Comfort and Luxury Like Never Before.
                         </h1>
                     </Marquee>
                 </div>

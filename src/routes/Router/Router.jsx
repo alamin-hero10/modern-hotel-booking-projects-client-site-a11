@@ -43,7 +43,7 @@ const Router = createBrowserRouter([
             {
                 path: "/roomDetails/:id",
                 element: <RoomDetail></RoomDetail>,
-                loader: ({ params }) => fetch(`http://localhost:5110/rooms/${params.id}`)
+                loader: ({ params }) => fetch(`${import.meta.env.VITE_API_URL}/rooms/${params.id}`)
             },
             {
                 path: "/myBookingUpdate",

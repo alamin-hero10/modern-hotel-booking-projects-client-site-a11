@@ -7,6 +7,7 @@ import SpecialOffer from "../../components/SpecialOffer/SpecialOffer";
 import PigeonMaps from "../../Map/PigeonMaps";
 import BookingOfferModal from "../../components/BookingOfferModal/BookingOfferModal";
 
+// https://modern-hotel-server-projects-a11.vercel.app
 
 const Home = () => {
 

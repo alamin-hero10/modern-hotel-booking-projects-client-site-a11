@@ -17,7 +17,7 @@ const FeaturedRooms = () => {
 
     // Axios DB Fetch the Data:
     const fetchAllRooms = async () => {
-        const { data } = await axios.get(`http://localhost:5110/rooms`)
+        const { data } = await axios.get(`${import.meta.env.VITE_API_URL}/rooms`)
         setRooms(data)
     }
 
