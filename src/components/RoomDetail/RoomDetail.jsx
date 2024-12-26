@@ -53,7 +53,7 @@ const RoomDetail = () => {
                                     <input type="radio" name="rating-8" className="mask mask-star-2 bg-orange-400" />
                                     <input type="radio" name="rating-8" className="mask mask-star-2 bg-orange-400" />
                                 </div>
-                                <p className="w-24 text-lg text-black font-semibold bg-[#fbf83c8c] px-3 rounded-lg">{totalReviews} <span className="text-xs">Review</span> </p>
+                                <p className="text-lg text-black font-semibold bg-[#fbf83c8c] px-3 rounded-lg">{totalReviews} <span className="text-xs">Review</span> </p>
                             </div>
                         </div>
                     </div>
