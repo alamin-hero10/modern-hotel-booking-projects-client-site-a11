@@ -31,7 +31,7 @@ const Home = () => {
                 <Count></Count>
             </div>
             {/* FeaturedRooms */}
-            <div className="mb-10 md:mb-0 bg-[#fdfeff] md:py-24">
+            <div className="mb-10 md:mb-0 bg-[#fdfeff] pb-20">
                 <div className="w-10/12 md:w-8/12 mx-auto">
                     <FeaturedRooms></FeaturedRooms>
                 </div>

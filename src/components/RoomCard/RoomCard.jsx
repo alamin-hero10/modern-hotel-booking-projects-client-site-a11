@@ -51,7 +51,7 @@ const RoomCard = ({ roomData }) => {
                                 // onChange={ratingChanged}
                                 size={24}
                                 color2={'#ffd700'} ></ReactStars>
-                            <p className="w-24 text-lg font-semibold bg-[#fbf83c8c] px-3 rounded-lg">{totalReviews} <span className="text-xs">Review</span> </p>
+                            <p className="text-lg font-semibold bg-[#fbf83c8c] px-3 rounded-lg">{totalReviews} <span className="text-xs">Review</span> </p>
                         </div>
                         {/* Button */}
                         <div className="flex items-center justify-between mb-5">
