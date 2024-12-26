@@ -85,12 +85,12 @@ const MyBooking = () => {
                 <table className="table table-lg border border-solid">
                     <thead className="border border-solid bg-slate-100">
                         <tr className="text-[17px] text-black font-normal">
-                            <th></th>
                             <th>Photo</th>
                             <th>Room Name</th>
                             <th>Your Email</th>
-                            <th>Date</th>
+                            <th>Your Name</th>
                             <th>Price</th>
+                            <th>Date</th>
                             <th>Edit</th>
                         </tr>
                     </thead>
@@ -99,14 +99,14 @@ const MyBooking = () => {
                         {
                             rooms.map((room) =>
                                 <tr key={room._id}>
-                                    <th>1</th>
                                     <td>
                                         <img className="w-[90px] border border-solid border-gray-300 p-1" src={room.roomImage} alt="" />
                                     </td>
                                     <td>{room.roomName}</td>
                                     <td>{room.customer.email}</td>
-                                    <td>{format(new Date(room.date), 'P')}</td>
+                                    <td>{room.customer.name}</td>
                                     <td>${room.price}</td>
+                                    <td>{format(new Date(room.date), 'P')}</td>
                                     <td>
                                         <div className="flex items-center gap-2">
                                             <Link to={`/myBookingUpdate`}>
