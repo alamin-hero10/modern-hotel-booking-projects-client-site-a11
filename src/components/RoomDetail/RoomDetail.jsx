@@ -41,15 +41,6 @@ const RoomDetail = () => {
                                 <h3 className="bg-white text-green-600 px-5 py-1 drop-shadow-md rounded-xl">Price: $<span className="text-lg font-medium">{price}</span></h3>
                             </div>
                             {/* Review and Rating Option- 01 */}
-                            {/* <div className="flex items-center gap-3 my-3">
-                                <ReactStars
-                                    count={5}
-                                    // onChange={ratingChanged}
-                                    size={24}
-                                    color2={'#ffd700'} ></ReactStars>
-                                <p className="text-lg font-semibold bg-yellow-100 px-3 rounded-lg">{totalReviews} <span className="text-xs">Review</span> </p>
-                            </div> */}
-                            {/* Review and Rating Option- 02 */}
                             <div className="flex items-center gap-3 my-3">
                                 <div className="rating rating-sm">
                                     <input type="radio" name="rating-8" className="mask mask-star-2 bg-orange-400" />

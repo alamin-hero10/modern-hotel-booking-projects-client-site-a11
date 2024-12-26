@@ -27,9 +27,6 @@ const MyBookingUpdate = () => {
     // ---Return---
     return (
         <div className="mt-14">
-            <div>
-                <p>Price: {room.price}</p>
-            </div>
             {/* ---Form--- */}
             <div className="card w-full max-w-3xl md:max-w-2xl mx-auto shrink-0 border">
                 <h2 className="text-xl md:text-2xl font-semibold text-center my-10">Update Information</h2>
@@ -44,8 +41,8 @@ const MyBookingUpdate = () => {
                                             <span className="label-text text-lg">Room Name:</span>
                                         </label>
                                         <input
-                                            type="email"
-                                            placeholder="email"
+                                            type="name"
+                                            placeholder="Name"
                                             defaultValue=""
                                             disabled={true}
                                             className="input input-bordered text-green-700 text-lg font-semibold"
@@ -70,14 +67,14 @@ const MyBookingUpdate = () => {
                                         <input
                                             name="description"
                                             type="text"
-                                            placeholder="Application Method"
+                                            placeholder="Description"
                                             className="input input-bordered py-[8px]"
                                             required />
                                     </div>
                                     {/* ---Booking Date--- */}
                                     <div className="form-control">
                                         <label className="label">
-                                            <span className="label-text text-lg">Booking Date</span>
+                                            <span className="label-text text-lg">Update Booking Date</span>
                                         </label>
                                         <DatePicker
                                             className="border p-2 rounded-md py-[10px] w-60"

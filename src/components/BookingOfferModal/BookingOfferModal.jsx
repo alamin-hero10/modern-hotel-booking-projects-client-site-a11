@@ -17,18 +17,18 @@ const BookingOfferModal = () => {
     }
 
     return (
-        <div>
+        <div className="">
             {
                 isModalOpen && (
-                    <dialog id="" className="modal modal-open">
-                        <div className="modal-box w-10/12 max-w-lg mx-height-0 p-0">
+                    <dialog id="" className="modal absolute modal-open">
+                        <div className="modal-box max-w-screen-sm w-10/12 p-2">
                             <form method="dialog">
                                 <button onClick={handleCloseModal} className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2 text-white bg-red-500">✕</button>
                             </form>
                             {/* ---Offer Image--- */}
-                            <div className="hero h-[400px]">
-                                <div className="hero-content text-neutral-content text-center p-0">
-                                    <div className="max-w-md">
+                            <div className="">
+                                <div className=" text-neutral-content text-center m-0 p-0">
+                                    <div className="">
                                         <div className="w-48 mx-auto">
                                             <Lottie animationData={offerAnimation} loop={true}></Lottie>
                                         </div>

@@ -22,22 +22,22 @@ const Home = () => {
             {/* SpecialOffer */}
             <div className="bg-[#fdfdff]">
                 <div className="w-10/12 mx-auto py-20">
-                <h1 className="text-xl md:text-3xl text-black font-semibold text-center mb-16 font-gildaFont">Special Offer for Winter</h1>
-                <SpecialOffer></SpecialOffer>
-            </div>
+                    <h1 className="text-xl md:text-3xl text-black font-semibold text-center mb-16 font-gildaFont">Special Offer for Winter</h1>
+                    <SpecialOffer></SpecialOffer>
+                </div>
             </div>
             {/* React-Count */}
             <div className="w-10/12 mx-auto my-32">
                 <Count></Count>
             </div>
             {/* FeaturedRooms */}
-            <div className="my-20 bg-[#fdfeff] md:py-24">
+            <div className="mb-10 md:mb-0 bg-[#fdfeff] md:py-24">
                 <div className="w-10/12 md:w-8/12 mx-auto">
                     <FeaturedRooms></FeaturedRooms>
                 </div>
             </div>
             {/* Room Furniture */}
-            <div>
+            <div className="w-11/12 lg:w-screen">
                 <RoomFurniture></RoomFurniture>
             </div>
             {/* Pigeon Maps */}
@@ -45,7 +45,7 @@ const Home = () => {
                 <PigeonMaps></PigeonMaps>
             </div>
             {/* Offer-Modal */}
-            <div className="w-10/12 mx-auto">
+            <div className="">
                 <BookingOfferModal></BookingOfferModal>
             </div>
         </div>
