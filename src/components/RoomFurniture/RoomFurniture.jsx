@@ -15,7 +15,7 @@ const RoomFurniture = () => {
             <div className="hero place-items-stretch">
                 <div>
                     <img
-                        className="w-full h-[800px]" src={hotelImg} alt="" />
+                        className="w-full h-[1000px]" src={hotelImg} alt="" />
                 </div>
                 <div className="hero-overlay bg-opacity-60"></div>
                 <div className="w-7/12 mx-auto mt-28">
