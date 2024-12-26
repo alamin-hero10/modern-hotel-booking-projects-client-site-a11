@@ -46,7 +46,7 @@ const Router = createBrowserRouter([
                 loader: ({ params }) => fetch(`${import.meta.env.VITE_API_URL}/rooms/${params.id}`)
             },
             {
-                path: "/myBookingUpdate",
+                path: "/myBookingUpdate/:id",
                 element: <MyBookingUpdate></MyBookingUpdate>
             },
             {

@@ -7,7 +7,6 @@ import SpecialOffer from "../../components/SpecialOffer/SpecialOffer";
 import PigeonMaps from "../../Map/PigeonMaps";
 import BookingOfferModal from "../../components/BookingOfferModal/BookingOfferModal";
 
-// https://modern-hotel-server-projects-a11.vercel.app
 
 const Home = () => {
 
@@ -46,7 +45,7 @@ const Home = () => {
                 <PigeonMaps></PigeonMaps>
             </div>
             {/* Offer-Modal */}
-            <div>
+            <div className="w-10/12 mx-auto">
                 <BookingOfferModal></BookingOfferModal>
             </div>
         </div>

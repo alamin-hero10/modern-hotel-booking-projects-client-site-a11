@@ -9,29 +9,22 @@ const MyBookingUpdate = () => {
     // Date Picker:
     const [startDate, setStartDate] = useState(new Date());
 
-    const {id} = useParams();
-    console.log(id)
+    const { id } = useParams();
+    const [room, setRoom] = useState({});
+    console.log(room)
 
-    // UseState:
-    const [room, setRoom] = useState([]);
-
-    // ---UseEffect---
     useEffect(() => {
-        fetchRoomData()
+        fetchRoomData();
     }, [id]);
 
-    // ---Axios DB Fetch the Data---
     const fetchRoomData = async () => {
         const { data } = await axios.get(`${import.meta.env.VITE_API_URL}/add-booking/${id}`,
             { withCredentials: true }
-        )
-        setRoom(data)
-    }
+        );
+        setRoom(data);
+    };
 
-    console.log(room)
-
-
-
+    // ---Return---
     return (
         <div className="mt-14">
             <div>

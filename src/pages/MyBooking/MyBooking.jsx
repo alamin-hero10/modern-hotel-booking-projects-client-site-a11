@@ -19,7 +19,7 @@ const MyBooking = () => {
     // ---UseEffect---
     useEffect(() => {
         fetchAllRooms()
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [user]);
 
     // ---Axios DB Fetch the Data---
@@ -107,13 +107,14 @@ const MyBooking = () => {
                                     <td>{format(new Date(room.date), 'P')}</td>
                                     <td>
                                         <div className="flex items-center gap-2">
-                                            <Link to={`/myBookingUpdate`}>
-                                                {/* <Link to={`/myBookingUpdate/${room._id}`}> */}
+                                            <Link to={`/myBookingUpdate/${room._id}`}>
                                                 <button className="text-white bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Update Date</button>
                                             </Link>
                                             <button
                                                 onClick={() => document.getElementById('my_modal_4').showModal()}
-                                                className="text-white bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Review</button>
+                                                className="text-white bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">
+                                                Review
+                                            </button>
                                             <button
                                                 onClick={() => handleCancelConfirm(room._id)}
                                                 className="text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Cancel</button>
