@@ -66,11 +66,9 @@ const MyBooking = () => {
         ))
     }
 
-
-
     // ---Return---
     return (
-        <div className="md:w-9/12 md:mx-auto mx-3 my-10">
+        <div className="w-10/12 md:mx-auto mx-3 my-10 min-h-screen">
             <Helmet>
                 <title>My Booking| Modern Hotel</title>
             </Helmet>
@@ -108,16 +106,16 @@ const MyBooking = () => {
                                     <td>
                                         <div className="flex items-center gap-2">
                                             <Link to={`/myBookingUpdate/${room._id}`}>
-                                                <button className="text-white bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Update Date</button>
+                                                <button className="text-white bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 font-medium rounded-lg text-sm px-3 py-2 text-center">Update Date</button>
                                             </Link>
                                             <button
                                                 onClick={() => document.getElementById('my_modal_4').showModal()}
-                                                className="text-white bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">
+                                                className="text-white bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium rounded-lg text-sm px-5 py-2 text-center">
                                                 Review
                                             </button>
                                             <button
                                                 onClick={() => handleCancelConfirm(room._id)}
-                                                className="text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Cancel</button>
+                                                className="text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm px-5 py-2 text-center">Cancel</button>
                                         </div>
                                     </td>
                                 </tr>

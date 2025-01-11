@@ -22,7 +22,7 @@ const RoomDetail = () => {
                     src={roomImage}
                     alt="" />
                 {/* ---Details--- */}
-                <div className="mt-7 md:mt-0 border border-solid border-green-500 px-3">
+                <div className="mt-7 md:mt-0 border border-solid border-green-500 p-3">
                     <div className="md:flex items-center justify-between">
                         <div>
                             {/* Room Name */}
@@ -35,13 +35,12 @@ const RoomDetail = () => {
                                 <p className="text-base text-black font-normal">{location}</p>
                             </div>
                         </div>
-                        
                     </div>
                     {/* ---Divider--- */}
-                    <div className="divider divider-accent my-0 p-0"></div>
+                    <div className="border border-b border-green-200"></div>
                     {/* ---Section-01--- */}
                     {/* Review and Price */}
-                    <div className="flex items-center justify-between">
+                    <div className="md:flex items-center justify-between mt-1">
                         {/* Price */}
                         <div className="w-32 md:text-center ">
                             <h3 className="bg-white text-green-600 px-5 py-1 drop-shadow-md rounded-xl">Price: $<span className="text-lg font-medium">{price}</span></h3>
@@ -111,7 +110,7 @@ const RoomDetail = () => {
                         </div>
                     </div>
                     {/* Divider */}
-                    <div className="divider divider-accent my-0"></div>
+                    <div className="border border-b border-green-200"></div>
                     {/* Description */}
                     <div className="my-3">
                         <p className="text-base text-gray-500">
