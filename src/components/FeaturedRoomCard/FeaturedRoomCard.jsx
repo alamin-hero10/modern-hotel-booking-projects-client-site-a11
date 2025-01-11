@@ -11,7 +11,7 @@ const FeaturedRoomCard = ({ roomData }) => {
 
     return (
         <div className="animate__animated animate__zoomIn animate__delay-1s">
-            <div className="drop-shadow-2xl bg-white rounded-xl">
+            <div className="drop-shadow-2xl bg-white rounded-xl mx-w-[880px] mx-h-[650px]">
                 {/* Image */}
                 <div>
                     <img
@@ -20,12 +20,12 @@ const FeaturedRoomCard = ({ roomData }) => {
                         alt="hotel1.png" />
                 </div>
                 {/* Room Name */}
-                <div className="px-7 pt-5 pb-1">
+                <div className="px-4 pt-5 pb-1">
                     <div>
                         <h1 className="text-[22px] text-black font-medium">{roomName}</h1>
                     </div>
                     {/* Location */}
-                    <div className="flex items-center gap-3 my-5">
+                    <div className="flex items-center gap-3 my-2">
                         <LuMapPin className="size-5" />
                         <p className="text-base text-black font-normal">{location}</p>
                     </div>
@@ -53,7 +53,7 @@ const FeaturedRoomCard = ({ roomData }) => {
                     <div className="flex items-center justify-between mb-4">
                         {/* Price */}
                         <div className="">
-                            <h3 className="w-32 bg-white text-green-600 px-5 py-1 drop-shadow-md rounded-xl">Price: $<span className="text-lg font-medium">{price}</span></h3>
+                            <h3 className="w-32 bg-white text-black px-5 py-1 drop-shadow-md rounded-xl">Price: $<span className="text-lg font-medium">{price}</span></h3>
                         </div>
                         {/* Book Now Button */}
                         <div className="">

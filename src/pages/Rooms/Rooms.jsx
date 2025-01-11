@@ -23,14 +23,14 @@ const Rooms = () => {
 
     // ---Return---
     return (
-        <div className="w-10/12 mx-auto my-14">
+        <div className="w-10/12 mx-auto my-14 min-h-screen">
             <Helmet>
                 <title>Rooms | Modern Hotel</title>
                 <meta name="description" content="Nested component" />
             </Helmet>
             {/* ---Sorting--- */}
             <div className="md:flex items-center justify-between mb-7">
-                <h1 className="text-2xl font-medium bg-green-100 rounded-xl py-1 px-3 mb-5 md:mb-0">Choose The Room:</h1>
+                <h1 className="text-2xl font-medium bg-green-100 py-1 px-3 mb-5 md:mb-0">Choose The Room:</h1>
                 {/* ---Sorting--- */}
                 <div className="">
                     <select
@@ -43,7 +43,7 @@ const Rooms = () => {
                 </div>
             </div>
             {/* ---Rooms Map--- */}
-            <div className="grid grid-cols-1 gap-7 md:grid-cols-2 md:gap-12 lg:grid-cols-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
                 {
                     rooms.map((room) => <RoomCard key={room._id} roomData={room}></RoomCard>)
                 }

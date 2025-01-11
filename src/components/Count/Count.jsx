@@ -9,7 +9,7 @@ import 'animate.css';
 
 const Count = () => {
     return (
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5 mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 items-center justify-between gap-5 mx-auto">
             <div className="flex items-center justify-center gap-3 animate__animated animate__bounceInLeft animate__delay-.5s animate__slower">
                 <img className="w-16 h-16" src={guests} alt="" />
                 <div className="ml-2">

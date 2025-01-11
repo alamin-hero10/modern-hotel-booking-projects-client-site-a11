@@ -21,7 +21,7 @@ const Navbar = () => {
 
     // ---Return---
     return (
-        <div className="navbar bg-[#F1F5F9] px-0  z-10">
+        <div className="navbar bg-[#F1F5F9] px-0 py-2">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -120,9 +120,9 @@ const Navbar = () => {
                                 </>
                                     :
                                     <>
-                                        <div className="flex flex-col md:flex md:flex-row">
-                                            <Link to="/login" className="text-white bg-gradient-to-r from-teal-400 via-teal-500 to-teal-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-teal-300 dark:focus:ring-teal-800 font-medium rounded-lg text-lg px-5 py-1.5 text-center me-2 mb-2">Login</Link>
-                                            <Link to="/register" className="text-white bg-gradient-to-r from-teal-400 via-teal-500 to-teal-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-teal-300 dark:focus:ring-teal-800 font-medium rounded-lg text-lg px-5 py-1.5 text-center me-2 mb-2">Register</Link>
+                                        <div className="flex flex-col gap-3 md:flex md:flex-row">
+                                            <Link to="/login" className="text-white bg-gradient-to-r from-teal-400 via-teal-500 to-teal-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-teal-300 dark:focus:ring-teal-800 font-medium rounded-sm text-lg px-5 py-1.5 text-center me-2 mb-2">Login</Link>
+                                            <Link to="/register" className="text-white bg-gradient-to-r from-teal-400 via-teal-500 to-teal-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-teal-300 dark:focus:ring-teal-800 font-medium rounded-sm text-lg px-5 py-1.5 text-center me-2 mb-2">Register</Link>
                                         </div>
                                     </>
                             }

@@ -9,7 +9,6 @@ import BookingOfferModal from "../../components/BookingOfferModal/BookingOfferMo
 
 
 const Home = () => {
-
     return (
         <div className="">
             <Helmet>
@@ -32,7 +31,7 @@ const Home = () => {
             </div>
             {/* FeaturedRooms */}
             <div className="mb-10 md:mb-0 bg-[#fdfeff] pb-20">
-                <div className="w-10/12 md:w-8/12 mx-auto">
+                <div className="w-10/12 mx-auto">
                     <FeaturedRooms></FeaturedRooms>
                 </div>
             </div>

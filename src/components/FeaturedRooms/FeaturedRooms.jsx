@@ -23,9 +23,9 @@ const FeaturedRooms = () => {
 
     // ---Return---
     return (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-14">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
             {
-                rooms.slice(0, 6).map((room) => <FeaturedRoomCard key={room._id} roomData={room}></FeaturedRoomCard>)
+                rooms.slice(0, 4).map((room) => <FeaturedRoomCard key={room._id} roomData={room}></FeaturedRoomCard>)
             }
         </div>
     );

@@ -15,13 +15,14 @@ const RoomDetail = () => {
 
     // ---Return---
     return (
-        <div className="w-8/12 mx-auto my-20">
+        <div className="w-10/12 mx-auto my-20">
             <div className="md:flex items-center gap-10">
                 <img
                     className="w-[640px] border border-solid border-green-500 p-2"
                     src={roomImage}
                     alt="" />
-                <div className="mt-7 md:mt-0">
+                {/* ---Details--- */}
+                <div className="mt-7 md:mt-0 border border-solid border-green-500 px-3">
                     <div className="md:flex items-center justify-between">
                         <div>
                             {/* Room Name */}
@@ -34,32 +35,33 @@ const RoomDetail = () => {
                                 <p className="text-base text-black font-normal">{location}</p>
                             </div>
                         </div>
-                        {/* Review and Price */}
-                        <div className="">
-                            {/* Price */}
-                            <div className="w-32 md:text-center mb-5">
-                                <h3 className="bg-white text-green-600 px-5 py-1 drop-shadow-md rounded-xl">Price: $<span className="text-lg font-medium">{price}</span></h3>
-                            </div>
-                            {/* Review and Rating Option- 01 */}
-                            <div className="flex items-center gap-3 my-3">
-                                <div className="rating rating-sm">
-                                    <input type="radio" name="rating-8" className="mask mask-star-2 bg-orange-400" />
-                                    <input
-                                        type="radio"
-                                        name="rating-8"
-                                        className="mask mask-star-2 bg-orange-400"
-                                        defaultChecked />
-                                    <input type="radio" name="rating-8" className="mask mask-star-2 bg-orange-400" />
-                                    <input type="radio" name="rating-8" className="mask mask-star-2 bg-orange-400" />
-                                    <input type="radio" name="rating-8" className="mask mask-star-2 bg-orange-400" />
-                                </div>
-                                <p className="text-lg text-black font-semibold bg-[#fbf83c8c] px-3 rounded-lg">{totalReviews} <span className="text-xs">Review</span> </p>
-                            </div>
-                        </div>
+                        
                     </div>
                     {/* ---Divider--- */}
-                    <div className="divider divider-accent my-0"></div>
+                    <div className="divider divider-accent my-0 p-0"></div>
                     {/* ---Section-01--- */}
+                    {/* Review and Price */}
+                    <div className="flex items-center justify-between">
+                        {/* Price */}
+                        <div className="w-32 md:text-center ">
+                            <h3 className="bg-white text-green-600 px-5 py-1 drop-shadow-md rounded-xl">Price: $<span className="text-lg font-medium">{price}</span></h3>
+                        </div>
+                        {/* Review and Rating Option- 01 */}
+                        <div className="flex items-center gap-3 my-3">
+                            <div className="rating rating-sm">
+                                <input type="radio" name="rating-8" className="mask mask-star-2 bg-orange-400" />
+                                <input
+                                    type="radio"
+                                    name="rating-8"
+                                    className="mask mask-star-2 bg-orange-400"
+                                    defaultChecked />
+                                <input type="radio" name="rating-8" className="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-8" className="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-8" className="mask mask-star-2 bg-orange-400" />
+                            </div>
+                            <p className="text-lg text-black font-semibold bg-[#fbf83c8c] px-3 rounded-lg">{totalReviews} <span className="text-xs">Review</span> </p>
+                        </div>
+                    </div>
                     <div className="mt-3">
                         <ul className="md:flex items-center justify-between">
                             {
@@ -78,7 +80,7 @@ const RoomDetail = () => {
                     </div>
                     {/* Top Categories */}
                     <div>
-                        <ul className="md:flex items-center gap-7 my-7">
+                        <ul className="md:flex items-center gap-7 my-3">
                             {
                                 roomData.topCategories.map((features, index) => (
                                     <>

@@ -12,7 +12,7 @@ const RoomCard = ({ roomData }) => {
 
 
     return (
-        <div className="animate__animated animate__zoomIn animate__delay-1s">
+        <div className="animate__animated animate__zoomIn animate__delay-1s mx-w-[880px] mx-h-[650px]">
             {/* ---Room Card--- */}
             <Link to={`/roomDetails/${_id}`}>
                 <div className="drop-shadow-2xl bg-white rounded-xl">
@@ -24,7 +24,7 @@ const RoomCard = ({ roomData }) => {
                             alt="hotel1.png" />
                     </div>
                     {/* Room Name */}
-                    <div className="px-7 pt-5 pb-1">
+                    <div className="px-4 pt-5">
                         <div>
                             <h1 className="text-[22px] text-black font-medium">{roomName}</h1>
                         </div>
@@ -54,14 +54,14 @@ const RoomCard = ({ roomData }) => {
                             <p className="text-lg font-semibold bg-[#fbf83c8c] px-3 rounded-lg">{totalReviews} <span className="text-xs">Review</span> </p>
                         </div>
                         {/* Button */}
-                        <div className="flex items-center justify-between mb-5">
+                        <div className="flex items-center justify-between mb-7 pb-4">
                             {/* Price */}
                             <div className="">
                                 <h3 className="w-32 bg-white text-green-600 px-5 py-1 drop-shadow-md rounded-xl">Price: $<span className="text-lg font-medium">{price}</span></h3>
                             </div>
                             {/* Book Now Button */}
                             <div className="">
-                                <button onClick={() => document.getElementById('my_modal_4').showModal()} className="text-white md:text-lg  bg-gradient-to-br from-green-400 to-blue-600 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800 font-medium rounded-lg text-sm px-2 py-1 text-center me-2 mb-2">Book Now</button>
+                                <button onClick={() => document.getElementById('my_modal_4').showModal()} className="text-white md:text-lg  bg-gradient-to-br from-green-400 to-blue-600 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800 font-medium rounded-sm text-sm px-2 py-1 text-center">Book Now</button>
                             </div>
                         </div>
                     </div>
